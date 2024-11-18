@@ -2,7 +2,7 @@
 .env
 
 # virual environment
-.venv
+venv/
 
 # IDE cache
 .idea

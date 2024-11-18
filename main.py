@@ -1,18 +1,17 @@
 import asyncio
-from aiogram import Bot, Dispatcher, F, types
+from aiogram import Bot, Dispatcher, types
 
 from logger.logger import setup_logger
-from config.config import Config
+from config.config import settings
 import pathlib
 
 
 async def run():
     path = pathlib.Path(__file__).parent.resolve()
-    settings = Config()
-    logger = await setup_logger(path=path.joinpath('logs').resolve(), debug=await settings.get_debug_status())
+    logger = await setup_logger(path=path.joinpath('logs').resolve(), debug=settings.get_debug_status())
     logger.info('Инициализация')
 
-    bot = Bot(token=await settings.get_bot_api())
+    bot = Bot(token=settings.get_bot_api())
     dp = Dispatcher()
 
     # dp.include_routers(
@@ -22,6 +21,7 @@ async def run():
     await on_startup(bot=bot)
     await bot.delete_webhook(drop_pending_updates=True)
     logger.info('Запуск')
+
     await dp.start_polling(bot)
 
 
