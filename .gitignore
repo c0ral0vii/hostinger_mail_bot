@@ -1,2 +1,12 @@
+# secret data
 .env
+
+# virual environment
 .venv
+
+# IDE cache
+.idea
+
+# python cache
+__pycache__
+__init__.py
