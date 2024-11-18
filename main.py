@@ -3,20 +3,30 @@ from aiogram import Bot, Dispatcher, types
 
 from logger.logger import setup_logger
 from config.config import settings
+from src.services.bot.handlers import (
+    start_handler,
+    admin_handler,
+    search_handler,
+    admin_search_handler,
+    admin_export_handler
+)
+
 import pathlib
 
+logger = setup_logger(__name__)
 
 async def run():
-    path = pathlib.Path(__file__).parent.resolve()
-    logger = await setup_logger(path=path.joinpath('logs').resolve(), debug=settings.get_debug_status())
+    # path = pathlib.Path(__file__).parent.resolve()
     logger.info('Инициализация')
 
     bot = Bot(token=settings.get_bot_api())
     dp = Dispatcher()
 
-    # dp.include_routers(
-    #
-    # )
+    dp.include_routers(
+        start_handler.command_router,
+        admin_handler.admin_router,
+        search_handler.search_router,
+    )
 
     await on_startup(bot=bot)
     await bot.delete_webhook(drop_pending_updates=True)
@@ -28,7 +38,6 @@ async def run():
 async def on_startup(bot: Bot):
     commands = [
         types.BotCommand(command="/start", description="Запуск бота"),
-        types.BotCommand(command="/help", description="Помощь"),
     ]
 
     await bot.set_my_commands(commands)

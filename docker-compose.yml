@@ -12,19 +12,19 @@ services:
     networks:
       - app
 
-  bot:
-    build:
-      context: .
-    container_name: tg_bot
-    env_file:
-      - .env
-    depends_on:
-      - db
-    volumes:
-      - temp:/temp
-      - .:/app
-    networks:
-      - app
+#  bot:
+#    build:
+#      context: .
+#    container_name: tg_bot
+#    env_file:
+#      - .env
+#    depends_on:
+#      - db
+#    volumes:
+#      - temp:/temp
+#      - .:/app
+#    networks:
+#      - app
 
 
 volumes:

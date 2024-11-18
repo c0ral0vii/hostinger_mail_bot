@@ -37,6 +37,7 @@ class PayList(Base):
     amount: Mapped[float] = mapped_column(Numeric, nullable=False)
     date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
 
-    user: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    user: Mapped["User"] = relationship(back_populates="pay_lists")
 
 

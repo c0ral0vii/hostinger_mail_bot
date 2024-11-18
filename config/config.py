@@ -28,6 +28,9 @@ class Config:
 
         self._DEBUG = os.getenv("DEBUG", False)
 
+        # Admins
+
+        self._ADMIN_LIST = [944360812,]
 
     def get_database_link(self):
         return rf'postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}'
@@ -40,5 +43,9 @@ class Config:
 
     def get_base_host(self):
         return self.BASE_HOST
+
+    def get_admin_list(self):
+        return self._ADMIN_LIST
+
 
 settings = Config()

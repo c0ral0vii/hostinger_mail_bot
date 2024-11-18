@@ -3,3 +3,59 @@
 2024-11-18 03:28:03,923 - bot_logger - INFO - Инициализация
 2024-11-18 03:28:16,720 - bot_logger - INFO - Инициализация
 2024-11-18 03:28:20,694 - bot_logger - INFO - Запуск
+2024-11-18 21:25:36,244 - bot_logger - INFO - Инициализация
+2024-11-18 21:25:36,968 - bot_logger - INFO - Запуск
+2024-11-19 00:06:49,768 - __main__ - INFO - Инициализация
+2024-11-19 00:06:50,751 - __main__ - INFO - Запуск
+2024-11-19 00:07:05,003 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:08:39,622 - __main__ - INFO - Инициализация
+2024-11-19 00:08:40,376 - __main__ - INFO - Запуск
+2024-11-19 00:08:44,721 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:09:07,790 - __main__ - INFO - Инициализация
+2024-11-19 00:09:08,435 - __main__ - INFO - Запуск
+2024-11-19 00:09:21,896 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-19 00:12:01,842 - __main__ - INFO - Инициализация
+2024-11-19 00:12:02,585 - __main__ - INFO - Запуск
+2024-11-19 00:12:04,293 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:12:08,535 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:12:16,241 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:17:02,627 - __main__ - INFO - Инициализация
+2024-11-19 00:17:03,648 - __main__ - INFO - Запуск
+2024-11-19 00:17:05,433 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:17:08,035 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:37:44,448 - __main__ - INFO - Инициализация
+2024-11-19 00:37:45,213 - __main__ - INFO - Запуск
+2024-11-19 00:37:55,640 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:37:58,047 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:39:50,576 - __main__ - INFO - Инициализация
+2024-11-19 00:39:51,290 - __main__ - INFO - Запуск
+2024-11-19 00:39:56,128 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:40:21,437 - __main__ - INFO - Инициализация
+2024-11-19 00:40:22,155 - __main__ - INFO - Запуск
+2024-11-19 00:40:28,465 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:42:55,037 - __main__ - INFO - Инициализация
+2024-11-19 00:42:55,878 - __main__ - INFO - Запуск
+2024-11-19 00:42:58,178 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:43:00,371 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
+2024-11-19 00:43:33,440 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:43:36,514 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
+2024-11-19 00:44:14,810 - __main__ - INFO - Инициализация
+2024-11-19 00:44:15,484 - __main__ - INFO - Запуск
+2024-11-19 00:44:17,903 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:44:19,574 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
+2024-11-19 00:46:18,638 - __main__ - INFO - Инициализация
+2024-11-19 00:46:19,342 - __main__ - INFO - Запуск
+2024-11-19 00:46:22,053 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:46:23,169 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:46:24,674 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует saf
+2024-11-19 00:48:59,355 - __main__ - INFO - Инициализация
+2024-11-19 00:49:00,151 - __main__ - INFO - Запуск
+2024-11-19 00:49:23,455 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:49:24,515 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:49:25,779 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asdf
+2024-11-19 00:50:15,040 - __main__ - INFO - Инициализация
+2024-11-19 00:50:15,770 - __main__ - INFO - Запуск
+2024-11-19 00:50:18,502 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-19 00:50:19,488 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-19 00:50:20,493 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asf
+2024-11-19 00:50:20,494 - src.services.bot.handlers.search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
