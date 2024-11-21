@@ -7,10 +7,10 @@ from src.services.bot.handlers import (
     start_handler,
     admin_handler,
     search_handler,
+    code_handler,
     admin_search_handler,
-    admin_export_handler
+    admin_export_handler,
 )
-
 import pathlib
 
 logger = setup_logger(__name__)
@@ -25,7 +25,10 @@ async def run():
     dp.include_routers(
         start_handler.command_router,
         admin_handler.admin_router,
+        admin_search_handler.admin_search,
+        admin_export_handler.export_router,
         search_handler.search_router,
+        code_handler.get_code_router,
     )
 
     await on_startup(bot=bot)

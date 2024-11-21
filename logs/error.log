@@ -1,8 +1,4 @@
-2024-11-18 03:14:09,473 - bot_logger - CRITICAL - test
-2024-11-19 00:43:00,371 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
-2024-11-19 00:43:36,514 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
-2024-11-19 00:44:19,574 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует None
-2024-11-19 00:46:24,674 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует saf
-2024-11-19 00:49:25,779 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asdf
-2024-11-19 00:50:20,493 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asf
-2024-11-19 00:50:20,494 - src.services.bot.handlers.search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-19 01:46:39,076 - __main__ - CRITICAL - Произошла ошибка unsupported operand type(s) for +=: 'int' and 'str'
+2024-11-20 22:47:40,499 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
+2024-11-20 23:03:50,042 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
+2024-11-21 00:00:53,511 - src.services.mail.main - ERROR - de@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
