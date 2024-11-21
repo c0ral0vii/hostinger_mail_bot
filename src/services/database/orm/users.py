@@ -48,7 +48,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
                 User.serial_number == find_str,
                 User.username == f'@{find_str}',
                 User.email == find_str,
-                User.user_number == int(find_str.replace('+', '').replace('-', '').replace(' ', '')),
+                User.user_number == find_str.replace('+', '').replace('-', '').replace(' ', ''),
             )
         )
 
@@ -65,7 +65,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
             }
 
         return {
-            "user_id": f"ID: {user.id}",
+            "user_id": f"ID: {user.id}" if {user.id} is not None else "ID: Не задано",
             "serial_number": user.serial_number,
             "need_pay_date": user.need_pay_date,
             "stay_on_pause": user.stay_on_pause,

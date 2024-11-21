@@ -20,7 +20,7 @@ async def search_user(message: types.Message, state: FSMContext):
 
     logger.info(fr'Начал поиск - @{message.from_user.username}, ID: {message.from_user.id}')
     await state.set_state(InputNumberState.number)
-    await message.answer('Введите определённый номер, юзернейм, почту или номер телефона')
+    await message.answer('Введите определённый номер или номер телефона')
 
 
 @admin_search.message(F.text, StateFilter(InputNumberState.number))

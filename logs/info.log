@@ -78,3 +78,77 @@
 2024-11-21 00:00:53,513 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
 2024-11-21 00:01:01,198 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-11-21 00:01:06,632 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-21 07:55:35,355 - __main__ - INFO - Инициализация
+2024-11-21 07:55:35,857 - __main__ - INFO - Запуск
+2024-11-21 07:56:45,546 - __main__ - INFO - Инициализация
+2024-11-21 07:56:46,216 - __main__ - INFO - Запуск
+2024-11-21 07:56:51,114 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 07:57:58,591 - __main__ - INFO - Инициализация
+2024-11-21 07:57:58,989 - __main__ - INFO - Запуск
+2024-11-21 07:58:00,538 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:24:11,708 - __main__ - INFO - Инициализация
+2024-11-21 08:24:12,247 - __main__ - INFO - Запуск
+2024-11-21 08:25:03,525 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:26:03,038 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 08:34:34,306 - __main__ - INFO - Инициализация
+2024-11-21 08:34:35,021 - __main__ - INFO - Запуск
+2024-11-21 08:34:45,037 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-21 08:34:47,471 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-21 08:34:49,947 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:38:36,362 - __main__ - INFO - Инициализация
+2024-11-21 08:38:37,039 - __main__ - INFO - Запуск
+2024-11-21 08:38:42,462 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-21 08:38:46,257 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-21 08:38:47,828 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:43:25,837 - __main__ - INFO - Инициализация
+2024-11-21 08:43:26,643 - __main__ - INFO - Запуск
+2024-11-21 08:43:27,326 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:45:50,085 - __main__ - INFO - Инициализация
+2024-11-21 08:45:50,772 - __main__ - INFO - Запуск
+2024-11-21 08:45:53,569 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 08:47:09,248 - __main__ - INFO - Инициализация
+2024-11-21 08:47:11,529 - __main__ - INFO - Запуск
+2024-11-21 08:48:13,907 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:00:46,814 - __main__ - INFO - Инициализация
+2024-11-21 09:00:47,983 - __main__ - INFO - Запуск
+2024-11-21 09:00:50,907 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:14:26,292 - __main__ - INFO - Инициализация
+2024-11-21 09:14:27,076 - __main__ - INFO - Запуск
+2024-11-21 09:14:28,483 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:19:28,606 - __main__ - INFO - Инициализация
+2024-11-21 09:19:29,267 - __main__ - INFO - Запуск
+2024-11-21 09:19:33,756 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:23:17,459 - __main__ - INFO - Инициализация
+2024-11-21 09:23:18,060 - __main__ - INFO - Запуск
+2024-11-21 09:23:30,749 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:24:59,903 - __main__ - INFO - Инициализация
+2024-11-21 09:25:00,596 - __main__ - INFO - Запуск
+2024-11-21 09:27:16,708 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:30:51,501 - __main__ - INFO - Инициализация
+2024-11-21 09:30:52,172 - __main__ - INFO - Запуск
+2024-11-21 09:31:28,289 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:33:16,784 - __main__ - INFO - Инициализация
+2024-11-21 09:33:17,369 - __main__ - INFO - Запуск
+2024-11-21 09:33:21,799 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:34:49,092 - __main__ - INFO - Инициализация
+2024-11-21 09:34:49,764 - __main__ - INFO - Запуск
+2024-11-21 09:34:51,513 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 09:35:19,239 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:16:34,271 - __main__ - INFO - Инициализация
+2024-11-21 10:16:35,014 - __main__ - INFO - Запуск
+2024-11-21 10:16:39,963 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-21 10:16:40,910 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-21 10:16:43,623 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-21 10:16:45,741 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:16:58,904 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:17:10,803 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:17:18,098 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-21 10:17:21,652 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:17:25,985 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:17:59,865 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:18:00,729 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @fddhdhf
+2024-11-21 10:18:00,731 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-21 10:18:05,692 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-21 10:18:08,236 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует fddhdhf
+2024-11-21 10:18:08,238 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-21 10:58:35,942 - __main__ - INFO - Инициализация

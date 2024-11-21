@@ -13,10 +13,10 @@ class User(Base):
     __tablename__ = 'users'
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    user_id: Mapped[int] = mapped_column(Integer, nullable=False)
+    user_id: Mapped[int] = mapped_column(Integer, nullable=True)
     username: Mapped[str] = mapped_column(String, nullable=False)
-    user_number: Mapped[str] = mapped_column(Integer, nullable=False)
-    telegram_user: Mapped[int] = mapped_column(Integer, nullable=False)
+    user_number: Mapped[str] = mapped_column(String, nullable=False)
+    telegram_user: Mapped[int] = mapped_column(String, nullable=False)
 
     need_pay_date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
     pay_date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)

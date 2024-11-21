@@ -10,8 +10,10 @@ from src.services.bot.handlers import (
     code_handler,
     admin_search_handler,
     admin_export_handler,
+    admin_import_handler,
 )
 import pathlib
+
 
 logger = setup_logger(__name__)
 
@@ -27,6 +29,7 @@ async def run():
         admin_handler.admin_router,
         admin_search_handler.admin_search,
         admin_export_handler.export_router,
+        admin_import_handler.admin_import,
         search_handler.search_router,
         code_handler.get_code_router,
     )
