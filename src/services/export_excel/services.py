@@ -34,7 +34,7 @@ async def create_export_file(data: Dict[str, Any] = get_all_data()) -> pathlib.P
         ]
         sheet.append(row)
 
-        file_path = pathlib.Path().resolve() / 'temp' / 'export' / 'export_data.xlsx'
-        workbook.save(file_path)
+    file_path = pathlib.Path().resolve() / 'temp' / 'export' / 'export_data.xlsx'
+    workbook.save(file_path)
 
-        return file_path
+    return file_path

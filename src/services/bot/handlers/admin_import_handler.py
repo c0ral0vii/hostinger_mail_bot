@@ -7,7 +7,7 @@ from src.services.database.orm.import_excel import excel_import
 from src.services.bot.filters.chat_type import ChatTypeFilter, IsAdmin
 from src.services.bot.fsm.user_states import FileState
 import pandas as pd
-
+import os
 
 admin_import = Router(name='admin_import')
 admin_import.message.filter(ChatTypeFilter(["private"]), IsAdmin())
@@ -29,7 +29,7 @@ async def import_document(message: types.Message, state: FSMContext):
     document_id = message.document.file_id
     file = await message.bot.get_file(document_id)
 
-    file_path = f"temp/input/{message.document.file_name}"
+    file_path = os.path.join('/temp', 'Лист Microsoft Excel.xlsx')
     await message.bot.download_file(file.file_path, file_path)
 
     try:
