@@ -221,3 +221,194 @@ AttributeError: 'User' object has no attribute 'pay_list'. Did you mean: 'pay_li
 2024-11-27 00:08:34,078 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
 2024-11-27 00:08:35,588 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
 2024-11-27 00:08:36,993 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты @c0ral0vii
+2024-11-27 13:21:15,422 - __main__ - INFO - Инициализация
+2024-11-27 13:21:19,149 - __main__ - INFO - Запуск
+2024-11-27 13:21:25,797 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:21:39,681 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 13:23:36,632 - __main__ - INFO - Инициализация
+2024-11-27 13:23:37,028 - __main__ - INFO - Запуск
+2024-11-27 13:23:39,953 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 13:23:53,199 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:23:54,516 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @
+2024-11-27 13:31:12,883 - __main__ - INFO - Инициализация
+2024-11-27 13:31:13,223 - __main__ - INFO - Запуск
+2024-11-27 13:33:51,571 - __main__ - INFO - Инициализация
+2024-11-27 13:33:52,195 - __main__ - INFO - Запуск
+2024-11-27 13:35:34,868 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:35:43,879 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 13:35:51,456 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:35:53,427 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 13:35:54,488 - src.services.bot.handlers.admin_export_handler - ERROR - (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedTableError'>: relation "users" does not exist
+[SQL: SELECT users.id, users.user_id, users.username, users.user_number, users.telegram_user, users.need_pay_date, users.pay_date, users.activated_date, users.stay_on_pause, users.serial_number, users.email, users.password, users.pay_lists, users.created, users.updated 
+FROM users]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 510, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 756, in _prepare
+    prepared_stmt = await self._connection.prepare(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 635, in prepare
+    return await self._prepare(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 653, in _prepare
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedTableError: relation "users" does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedTableError'>: relation "users" does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 8, in create_export_file
+    data = await get_all_data()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/database/orm/export.py", line 11, in get_all_data
+    result = await session.execute(stmt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/ext/asyncio/session.py", line 461, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedTableError'>: relation "users" does not exist
+[SQL: SELECT users.id, users.user_id, users.username, users.user_number, users.telegram_user, users.need_pay_date, users.pay_date, users.activated_date, users.stay_on_pause, users.serial_number, users.email, users.password, users.pay_lists, users.created, users.updated 
+FROM users]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-27 13:36:39,561 - __main__ - INFO - Инициализация
+2024-11-27 13:36:39,954 - __main__ - INFO - Запуск
+2024-11-27 13:39:19,378 - __main__ - INFO - Инициализация
+2024-11-27 13:39:19,897 - __main__ - INFO - Запуск
+2024-11-27 13:39:25,547 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:39:27,418 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @
+2024-11-27 13:39:51,118 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 13:39:54,512 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-27 13:40:54,126 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 13:40:55,522 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @@c0ral0vii
+2024-11-27 13:40:55,523 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:40:57,670 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @c0ral0vii
+2024-11-27 13:40:57,671 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:41:00,808 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует c0ral0vii
+2024-11-27 13:41:00,809 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:43:30,345 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует tankist613
+2024-11-27 13:43:30,347 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:43:33,955 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @tankist613
+2024-11-27 13:43:33,956 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:43:41,244 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует M98_FaZa
+2024-11-27 13:43:41,245 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:43:45,586 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @M98_FaZa
+2024-11-27 13:43:45,587 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:43:47,425 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @@M98_FaZa
+2024-11-27 13:43:47,427 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:47:47,116 - __main__ - INFO - Инициализация
+2024-11-27 13:47:47,598 - __main__ - INFO - Запуск
+2024-11-27 13:47:49,206 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:47:51,282 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 13:48:05,889 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 13:48:58,210 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 13:51:24,978 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:51:27,060 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 13:51:29,532 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует c0ral0vii
+2024-11-27 13:51:29,533 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:51:31,702 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует @c0ral0vii
+2024-11-27 13:51:31,703 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:51:50,964 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует Найти в базе
+2024-11-27 13:51:50,966 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:51:51,930 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует 7 904 902 4696
+2024-11-27 13:51:51,931 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:52:04,830 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует Получить код с почты
+2024-11-27 13:52:04,832 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 13:52:27,179 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:52:28,512 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 13:54:54,285 - __main__ - INFO - Инициализация
+2024-11-27 13:54:54,707 - __main__ - INFO - Запуск
+2024-11-27 13:55:10,897 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:55:13,263 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
+2024-11-27 13:56:36,534 - __main__ - INFO - Инициализация
+2024-11-27 13:56:36,807 - __main__ - INFO - Запуск
+2024-11-27 13:56:41,519 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:56:43,459 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
+2024-11-27 13:59:24,045 - __main__ - INFO - Инициализация
+2024-11-27 13:59:24,523 - __main__ - INFO - Запуск
+2024-11-27 13:59:41,622 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 13:59:44,207 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-11-27 14:03:35,354 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 14:03:47,944 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-11-27 14:04:54,413 - __main__ - INFO - Инициализация
+2024-11-27 14:04:58,601 - __main__ - INFO - Запуск
+2024-11-27 14:05:15,091 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 14:05:29,319 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты c0ral0vii

@@ -10,13 +10,14 @@ class MailService:
     def __init__(self,
                  password: str,
                  email_adress: str,
+                 from_email: str,
                  logger=setup_logger(__name__)
                  ) -> None:
 
         self.imap_server = "imap.hostinger.com"
 
         self.logger = logger
-
+        self.from_email = from_email
         self.password = password
         self.email_adress = email_adress
 
@@ -76,7 +77,7 @@ class MailService:
 
         try:
             self.imap.select("INBOX")
-            status, messages = self.imap.search(None, 'ALL')
+            status, messages = self.imap.search(None, f'(TO "{self.from_email}")')
 
             if status != 'OK':
                 self.logger.error("Не удалось получить список сообщений")

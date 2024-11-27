@@ -46,7 +46,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
         stmt = select(User).where(
             or_(
                 User.serial_number == find_str,
-                User.username == f'@{find_str}',
+                User.telegram_user == f'{find_str}',
                 User.email == find_str,
                 User.user_number == find_str.replace('+', '').replace('-', '').replace(' ', ''),
             )
@@ -79,7 +79,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
 
 async def get_email(username: str) -> Dict[str, Any]:
     async with async_session() as session:
-        stmt = select(User).where(User.username == username)
+        stmt = select(User).where(User.telegram_user == f'@{username}')
         result = await session.execute(stmt)
         user = result.scalar_one_or_none()
 

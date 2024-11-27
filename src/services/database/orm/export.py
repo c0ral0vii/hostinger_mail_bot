@@ -21,7 +21,7 @@ async def get_all_data() -> Dict[str, Any]:
                 "pre_pay_day": user.pay_date,
                 "on_pause": user.stay_on_pause,
                 "phone": f"+{user.user_number}",
-                "tg_username": f"@{user.telegram_user}",
+                "tg_username": f"{user.telegram_user}",
                 "username": user.username,
                 "email": user.email,
                 "password": user.password,
