@@ -27,17 +27,4 @@ class User(Base):
     email: Mapped[str] = mapped_column(String, nullable=False)
     password: Mapped[str] = mapped_column(String, nullable=False) # password hashed
 
-    pay_lists: Mapped[List["PayList"]] = relationship(back_populates="user")
-
-
-class PayList(Base):
-    __tablename__ = 'paylists'
-
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    amount: Mapped[float] = mapped_column(Numeric, nullable=False)
-    date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
-
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    user: Mapped["User"] = relationship(back_populates="pay_lists")
-
-
+    pay_lists: Mapped[str] = mapped_column(String, nullable=True)

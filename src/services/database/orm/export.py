@@ -25,6 +25,7 @@ async def get_all_data() -> Dict[str, Any]:
                 "username": user.username,
                 "email": user.email,
                 "password": user.password,
+                "pay_list": user.pay_lists,
             }
 
             all_users[user.id] = u

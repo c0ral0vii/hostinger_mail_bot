@@ -46,7 +46,7 @@ async def import_document(message: types.Message, state: FSMContext):
             "username",
             "email",
             "password",
-            "paylist"
+            "pay_lists"
         ]
         df.columns = expected_columns
 
@@ -62,7 +62,7 @@ async def import_document(message: types.Message, state: FSMContext):
             username = row["username"]
             email = row["email"]
             password = row["password"]
-            paylist = row["paylist"]
+            pay_lists = row["pay_lists"]
 
             data = {
                 'serial_number': str(serial_number),
@@ -75,7 +75,7 @@ async def import_document(message: types.Message, state: FSMContext):
                 'username': str(username),
                 'email': str(email),
                 'password': str(password),
-                'paylist': paylist,
+                'pay_lists': pay_lists,
             }
 
             await excel_import(data=data)

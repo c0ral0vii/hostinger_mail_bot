@@ -6,3 +6,37 @@
 2024-11-21 10:18:00,731 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
 2024-11-21 10:18:08,236 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует fddhdhf
 2024-11-21 10:18:08,238 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-26 23:38:13,724 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-26 23:38:18,741 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-26 23:38:23,438 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asd
+2024-11-26 23:38:23,440 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-26 23:38:24,346 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует das
+2024-11-26 23:38:24,347 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-26 23:54:40,188 - src.services.bot.handlers.admin_export_handler - ERROR - 'User' object has no attribute 'pay_list'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 8, in create_export_file
+    data = await get_all_data()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/database/orm/export.py", line 28, in get_all_data
+    "pay_list": user.pay_list,
+                ^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'pay_list'. Did you mean: 'pay_lists'?
+2024-11-26 23:56:00,313 - src.services.bot.handlers.admin_export_handler - ERROR - 'User' object has no attribute 'pay_list'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 8, in create_export_file
+    data = await get_all_data()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/database/orm/export.py", line 28, in get_all_data
+    "pay_list": user.pay_list,
+                ^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'pay_list'. Did you mean: 'pay_lists'?
+2024-11-27 00:02:34,579 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 00:07:46,083 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует '123
+2024-11-27 00:07:46,085 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 00:08:35,588 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii

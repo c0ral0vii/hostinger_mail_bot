@@ -12,10 +12,10 @@ from src.services.bot.handlers import (
     admin_export_handler,
     admin_import_handler,
 )
-import pathlib
-
+from src.services.notification.service import Notification
 
 logger = setup_logger(__name__)
+
 
 async def run():
     # path = pathlib.Path(__file__).parent.resolve()
@@ -42,6 +42,8 @@ async def run():
 
 
 async def on_startup(bot: Bot):
+    # asyncio.create_task(Notification(bot=bot).start())
+
     commands = [
         types.BotCommand(command="/start", description="Запуск бота"),
     ]

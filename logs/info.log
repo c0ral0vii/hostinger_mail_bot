@@ -154,3 +154,70 @@
 2024-11-21 10:58:35,942 - __main__ - INFO - Инициализация
 2024-11-21 11:19:16,843 - __main__ - INFO - Инициализация
 2024-11-21 11:19:17,385 - __main__ - INFO - Запуск
+2024-11-26 23:29:24,948 - __main__ - INFO - Инициализация
+2024-11-26 23:29:25,384 - __main__ - INFO - Запуск
+2024-11-26 23:38:04,299 - __main__ - INFO - Инициализация
+2024-11-26 23:38:04,685 - __main__ - INFO - Запуск
+2024-11-26 23:38:11,416 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-26 23:38:13,724 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-26 23:38:14,963 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты @c0ral0vii
+2024-11-26 23:38:18,741 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-26 23:38:19,576 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты @c0ral0vii
+2024-11-26 23:38:21,160 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-26 23:38:23,438 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует asd
+2024-11-26 23:38:23,440 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-26 23:38:24,346 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует das
+2024-11-26 23:38:24,347 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-26 23:38:27,360 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-26 23:38:30,571 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-26 23:38:44,016 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-26 23:54:17,773 - __main__ - INFO - Инициализация
+2024-11-26 23:54:18,171 - __main__ - INFO - Запуск
+2024-11-26 23:54:35,496 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-26 23:54:38,636 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-26 23:54:40,188 - src.services.bot.handlers.admin_export_handler - ERROR - 'User' object has no attribute 'pay_list'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 8, in create_export_file
+    data = await get_all_data()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/database/orm/export.py", line 28, in get_all_data
+    "pay_list": user.pay_list,
+                ^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'pay_list'. Did you mean: 'pay_lists'?
+2024-11-26 23:54:45,718 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-26 23:56:00,313 - src.services.bot.handlers.admin_export_handler - ERROR - 'User' object has no attribute 'pay_list'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 8, in create_export_file
+    data = await get_all_data()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/database/orm/export.py", line 28, in get_all_data
+    "pay_list": user.pay_list,
+                ^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'pay_list'. Did you mean: 'pay_lists'?
+2024-11-26 23:57:05,346 - __main__ - INFO - Инициализация
+2024-11-26 23:57:05,674 - __main__ - INFO - Запуск
+2024-11-26 23:57:24,959 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-27 00:02:24,944 - __main__ - INFO - Инициализация
+2024-11-27 00:02:25,326 - __main__ - INFO - Запуск
+2024-11-27 00:02:32,629 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 00:02:34,579 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 00:02:35,944 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты @c0ral0vii
+2024-11-27 00:02:37,748 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 00:03:09,085 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 00:03:10,136 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-27 00:06:59,969 - __main__ - INFO - Инициализация
+2024-11-27 00:07:00,315 - __main__ - INFO - Запуск
+2024-11-27 00:07:05,708 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-11-27 00:07:07,047 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-11-27 00:07:45,208 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 00:07:46,083 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует '123
+2024-11-27 00:07:46,085 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-11-27 00:08:34,078 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 00:08:35,588 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
+2024-11-27 00:08:36,993 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты @c0ral0vii

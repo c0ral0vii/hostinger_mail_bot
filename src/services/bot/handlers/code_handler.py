@@ -15,7 +15,7 @@ async def get_code_from_mail(message: types.Message):
     message = await message.answer("Получаем код...")
     mail_data = await get_email(username=username)
 
-    mail_service = await MailService(email_adress=mail_data["email"], password=mail_data["password"]).get_last_message()
+    mail_service = await MailService(email_adress="Extra@zov.icu", password="Vitalik1!!!").get_last_message()
 
     if mail_service.get('status') == "200":
         await message.delete()

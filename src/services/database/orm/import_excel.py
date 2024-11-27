@@ -22,6 +22,7 @@ async def excel_import(data: dict) -> None:
                 user.username = data.get('username')
                 user.email = data.get('email')
                 user.password = data.get('password')
+                user.pay_lists = str(data.get("pay_lists", 'Нет'))
             else:
                 # Создание нового пользователя
                 user = User(
@@ -32,9 +33,10 @@ async def excel_import(data: dict) -> None:
                     stay_on_pause=data.get('on_pause'),
                     user_number=data.get('phone'),
                     telegram_user=data.get('telegram_username'),
-                    username=data.get('username'),
-                    email=data.get('email'),
-                    password=data.get('password'),
+                    username=data.get('username', 'Нет'),
+                    email=data.get('email', 'Нет'),
+                    password=data.get('password', 'Нет'),
+                    pay_lists=str(data.get("pay_lists", 'Нет'))
                 )
                 session.add(user)
 

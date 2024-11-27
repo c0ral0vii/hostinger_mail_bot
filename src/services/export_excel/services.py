@@ -13,7 +13,7 @@ async def create_export_file(data: Dict[str, Any] = get_all_data()) -> pathlib.P
 
     headers = [
         "id", 'serial number', 'activated date', 'pay_day', 'pre-pay day', 'on pause',
-        'phone', 'telegram username', 'username', 'email', 'password', 'test'
+        'phone', 'telegram username', 'username', 'email', 'password', 'pay_list'
     ]
     sheet.append(headers)
 
@@ -30,7 +30,7 @@ async def create_export_file(data: Dict[str, Any] = get_all_data()) -> pathlib.P
             user_data["username"],
             user_data["email"],
             user_data["password"],
-            'test'
+            user_data["pay_list"]
         ]
         sheet.append(row)
 

@@ -9,8 +9,6 @@ services:
       - POSTGRES_DB=${DB_NAME}
     ports:
       - "${DB_PORT}:${DB_PORT}"
-    networks:
-      - app
 
   bot:
     build:
@@ -23,13 +21,8 @@ services:
     volumes:
       - temp:/temp
       - .:/app
-    networks:
-      - app
 
 
 volumes:
   postgresdb:
   temp:
-
-networks:
-  app:
