@@ -31,6 +31,7 @@ async def search_user(serial_number: str) -> Dict[str, Any]:
         return {
             "pay_date": user.pay_date,
             "email": user.email,
+            "password": user.password,
         }
 
 
@@ -77,14 +78,14 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
         }
 
 
-async def get_email(username: str) -> Dict[str, Any]:
+async def get_email(cross_number: str) -> Dict[str, Any]:
     async with async_session() as session:
-        stmt = select(User).where(User.telegram_user == f'@{username}')
+        stmt = select(User).where(User.serial_number == cross_number)
         result = await session.execute(stmt)
         user = result.scalar_one_or_none()
 
         if not user:
-            logger.critical(f'Не удалось получить пользователя @{username}')
+            logger.critical(f'Не удалось получить кросс номер -- {cross_number}')
             return {
                 "error": "Not found",
                 "text": "Не найдена привязанная к вам почта"
@@ -92,7 +93,6 @@ async def get_email(username: str) -> Dict[str, Any]:
 
         return {
             "status": "200",
-            "to": username,
             "email": user.email,
             "password": user.password,
         }

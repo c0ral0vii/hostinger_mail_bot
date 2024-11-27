@@ -4,6 +4,7 @@ from aiogram.fsm.context import FSMContext
 
 from logger.logger import setup_logger
 from src.services.bot.fsm.user_states import InputNumberState
+from src.services.bot.keyboards.inline.code_keyboard import get_code_kb
 from src.services.database.orm.users import search_user
 
 
@@ -33,5 +34,6 @@ async def search(message: types.Message, state: FSMContext):
         logger.critical(f"ID-{message.from_user.id}, @{message.from_user.username}---{info.get('error')}, {info.get('text')}")
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
-        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень в который необходимо оплатить - {info.get('pay_date')}\nВаша почта - {info.get('email')}')
+        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень в который необходимо оплатить - {info.get('pay_date')}\nВаша почта - {info.get('email')}\nВаш пароль - {info.get("password")}',
+                             reply_markup=get_code_kb(cross_number=cross_number))
         await state.clear()

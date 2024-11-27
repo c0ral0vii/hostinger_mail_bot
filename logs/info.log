@@ -412,3 +412,14 @@ FROM users]
 2024-11-27 14:04:58,601 - __main__ - INFO - Запуск
 2024-11-27 14:05:15,091 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
 2024-11-27 14:05:29,319 - src.services.bot.handlers.code_handler - INFO - Пользователь запросил код с почты c0ral0vii
+2024-11-27 23:38:56,639 - __main__ - INFO - Инициализация
+2024-11-27 23:38:57,063 - __main__ - INFO - Запуск
+2024-11-27 23:39:29,964 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 23:39:31,297 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 23:41:01,903 - __main__ - INFO - Инициализация
+2024-11-27 23:41:02,263 - __main__ - INFO - Запуск
+2024-11-27 23:41:04,125 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-11-27 23:41:05,423 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 23:41:15,210 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400594583
+2024-11-27 23:41:21,834 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-11-27 23:41:26,554 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- 123

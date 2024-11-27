@@ -3,6 +3,7 @@ from aiogram.filters import StateFilter
 from aiogram.fsm.context import FSMContext
 
 from src.services.bot.fsm.user_states import InputNumberState
+from src.services.bot.keyboards.inline.code_keyboard import get_code_kb
 from src.services.database.orm.users import get_user_admin
 
 from src.services.bot.filters.chat_type import ChatTypeFilter, IsAdmin
@@ -37,5 +38,6 @@ async def search(message: types.Message, state: FSMContext):
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
         await message.answer(
-            f'👱{info.get("user_id")}\n🤖Серийный номер: {info.get("serial_number")}\n📅Дата оплаты: {info.get("need_pay_date")}\n🤖Статус паузы: {"На паузе" if info.get("stay_on_pause") else "Активен"}\n🤖Юзернейм: {info.get("username")}\n✉️Почта: {info.get("email")}\n🤖Пароль от почты {info.get("password")}\n📞Номер телефона {info.get("phone")}')
+            f'👱{info.get("user_id")}\n🤖Серийный номер: {info.get("serial_number")}\n📅Дата оплаты: {info.get("need_pay_date")}\n🤖Статус паузы: {"На паузе" if info.get("stay_on_pause") else "Активен"}\n🤖Юзернейм: {info.get("username")}\n✉️Почта: {info.get("email")}\n🤖Пароль от почты {info.get("password")}\n📞Номер телефона {info.get("phone")}',
+            reply_markup=get_code_kb(cross_number=cross_number))
         await state.clear()
