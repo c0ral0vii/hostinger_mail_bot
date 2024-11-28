@@ -18,7 +18,7 @@ async def get_code_from_mail(callback: types.CallbackQuery):
     mail_service = await MailService(from_email=mail_data["email"], email_adress="Extra@zov.icu", password="Vitalik1!!!").get_last_message()
 
     if mail_service.get('status') == "200":
-        await callback.message.delete()
+        # await callback.message.delete()
         logger.info(f"Запрошен серийный номер -- {cross_number}")
         await callback.message.answer(f"-> {mail_service.get('code')} <-")
     else:
