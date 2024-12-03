@@ -1,4 +1,6 @@
 from aiogram import Router, F, types
+
+from src.services.database.orm.get_emails import get_emails
 from src.services.mail.main import MailService
 from src.services.database.orm.users import get_email
 from logger.logger import setup_logger
@@ -14,12 +16,15 @@ async def get_code_from_mail(callback: types.CallbackQuery):
 
     message = await callback.message.answer("Получаем код...")
     mail_data = await get_email(cross_number=cross_number)
+    emails = await get_emails()
 
-    mail_service = await MailService(from_email=mail_data["email"], email_adress="Extra@zov.icu", password="Vitalik1!!!").get_last_message()
+    for email in emails:
+        mail_service = await MailService(from_email=mail_data["email"], email_adress=email.email, password=email.password).get_last_message()
+        if len(mail_service) > 3:
+            if mail_service.get('status') == "200":
+                # await callback.message.delete()
+                logger.info(f"Запрошен серийный номер -- {cross_number}")
+                await callback.message.answer(f"-> {mail_service.get('code')} <-")
+                return
 
-    if mail_service.get('status') == "200":
-        # await callback.message.delete()
-        logger.info(f"Запрошен серийный номер -- {cross_number}")
-        await callback.message.answer(f"-> {mail_service.get('code')} <-")
-    else:
-        await callback.message.answer(f"""Не удалось получить код с почты""")
+    await callback.message.answer(f"""Не удалось получить код с почты""")

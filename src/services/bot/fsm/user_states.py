@@ -7,3 +7,4 @@ class InputNumberState(StatesGroup):
 
 class FileState(StatesGroup):
     file = State()
+    email_file = State()

@@ -423,3 +423,44 @@ FROM users]
 2024-11-27 23:41:15,210 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400594583
 2024-11-27 23:41:21,834 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-11-27 23:41:26,554 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- 123
+2024-12-03 00:36:09,628 - __main__ - INFO - Инициализация
+2024-12-03 00:36:10,094 - __main__ - INFO - Запуск
+2024-12-03 00:36:15,225 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-03 00:36:17,897 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:37:37,564 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-12-03 00:37:59,623 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-03 00:38:02,234 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-03 00:39:39,697 - __main__ - INFO - Инициализация
+2024-12-03 00:39:40,023 - __main__ - INFO - Запуск
+2024-12-03 00:39:40,179 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:40:51,831 - __main__ - INFO - Инициализация
+2024-12-03 00:40:52,191 - __main__ - INFO - Запуск
+2024-12-03 00:40:55,542 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:40:56,964 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:43:14,045 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:44:10,925 - __main__ - INFO - Инициализация
+2024-12-03 00:44:11,354 - __main__ - INFO - Запуск
+2024-12-03 00:44:15,307 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:44:16,998 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:44:54,768 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:47:22,650 - __main__ - INFO - Инициализация
+2024-12-03 00:47:23,005 - __main__ - INFO - Запуск
+2024-12-03 00:47:26,597 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:47:28,320 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:50:27,606 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-12-03 00:50:51,865 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:55:40,546 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:58:26,423 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 00:59:15,936 - __main__ - INFO - Инициализация
+2024-12-03 00:59:16,391 - __main__ - INFO - Запуск
+2024-12-03 00:59:25,088 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-03 00:59:29,203 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 00:59:30,334 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 01:02:20,878 - __main__ - INFO - Инициализация
+2024-12-03 01:02:21,279 - __main__ - INFO - Запуск
+2024-12-03 01:02:29,514 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-03 01:02:31,374 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-03 01:02:52,858 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-03 01:03:06,420 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400594583
+2024-12-03 01:03:27,557 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-03 01:03:32,613 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400864544

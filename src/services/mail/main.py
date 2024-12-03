@@ -91,7 +91,7 @@ class MailService:
             if not message_ids:
                 self.logger.info("Сообщения отсутствуют")
                 return {
-                    "status": "204",
+                    "status": 204,
                     "text": "Сообщения отсутствуют"
                 }
 

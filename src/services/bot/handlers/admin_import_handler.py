@@ -29,7 +29,7 @@ async def import_document(message: types.Message, state: FSMContext):
     document_id = message.document.file_id
     file = await message.bot.get_file(document_id)
 
-    file_path = os.path.join('/temp', 'Лист Microsoft Excel.xlsx')
+    file_path = os.path.join('/temp', 'import_document.xlsx')
     await message.bot.download_file(file.file_path, file_path)
 
     try:

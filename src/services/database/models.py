@@ -28,3 +28,11 @@ class User(Base):
     password: Mapped[str] = mapped_column(String, nullable=False) # password hashed
 
     pay_lists: Mapped[str] = mapped_column(String, nullable=True)
+
+
+class EMail(Base):
+    __tablename__ = 'emails'
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    email: Mapped[str] = mapped_column(String, nullable=False)
+    password: Mapped[str] = mapped_column(String, nullable=False)

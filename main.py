@@ -11,6 +11,7 @@ from src.services.bot.handlers import (
     admin_search_handler,
     admin_export_handler,
     admin_import_handler,
+    admin_add_emails,
 )
 from src.services.notification.service import Notification
 
@@ -30,6 +31,8 @@ async def run():
         admin_search_handler.admin_search,
         admin_export_handler.export_router,
         admin_import_handler.admin_import,
+        admin_add_emails.add_emails_router,
+
         search_handler.search_router,
         code_handler.get_code_router,
     )

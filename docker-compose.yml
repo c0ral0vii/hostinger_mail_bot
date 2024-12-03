@@ -2,7 +2,7 @@ services:
   db:
     image: postgres
     restart: always
-    container_name: db
+    container_name: hostinger_mail_db
     environment:
       - POSTGRES_PASSWORD=${DB_PASS}
       - POSTGRES_USER=${DB_USER}
@@ -13,7 +13,7 @@ services:
   bot:
     build:
       context: .
-    container_name: tg_bot
+    container_name: hostinger_tg_bot
     env_file:
       - .env
     depends_on:
