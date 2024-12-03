@@ -91,7 +91,7 @@ class MailService:
             if not message_ids:
                 self.logger.info("Сообщения отсутствуют")
                 return {
-                    "status": 204,
+                    "status": "204",
                     "text": "Сообщения отсутствуют"
                 }
 
@@ -124,13 +124,28 @@ class MailService:
                 "subject": subject,
                 "code": code,
             }
+
+        except AttributeError as ae:
+            self.logger.error(f'На почте -> {self.from_email} <- не найден код - {ae}')
+            if self._con:
+                await self.disconnect()
+
+            return {
+                "status": "500",
+                "error": str(ae),
+                "text": "Произошла неизвестная ошибка",
+            }
+
         except Exception as e:
             self.logger.critical(f'Произошла ошибка {e}')
-            await self.disconnect()
+            if self._con:
+                await self.disconnect()
+
             return {
                 "status": "500",
                 "error": str(e),
                 "text": "Произошла неизвестная ошибка",
             }
+
 
 
