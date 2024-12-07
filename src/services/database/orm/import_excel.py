@@ -7,13 +7,13 @@ from src.services.database.database import async_session
 async def excel_import(data: dict) -> None:
     async with async_session() as session:
         try:
-            stmt = select(User).where(User.telegram_user == data['telegram_username'])
+            stmt = select(User).where(User.serial_number == data['serial_number'])
             result = await session.execute(stmt)
             user = result.scalar_one_or_none()
 
             if user:
                 # Обновление данных существующего пользователя
-                user.serial_number = data.get('serial_number')
+                User.telegram_user = data['telegram_username']
                 user.activated_date = data.get('activated_date')
                 user.need_pay_date = data.get('pay_day')
                 user.pay_day = data.get('pre_pay_day')
