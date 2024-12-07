@@ -1,7 +1,7 @@
 from aiogram import F, Router, types, Bot
 from aiogram.types import FSInputFile
 
-from src.services.export_excel.services import create_export_file
+from src.services.export_excel.services import create_export_file_users
 
 from src.services.bot.filters.chat_type import ChatTypeFilter, IsAdmin
 from logger.logger import setup_logger
@@ -16,7 +16,7 @@ logger = setup_logger(__name__)
 async def export_handler(message: types.Message, bot: Bot):
     message = await message.answer("Начинаем экспорт базы данных...")
     try:
-        path = await create_export_file()
+        path = await create_export_file_users()
         if not path.exists():
             logger.error('Файл не найден')
             await message.answer('Файл не найден')
@@ -25,7 +25,6 @@ async def export_handler(message: types.Message, bot: Bot):
         file = FSInputFile(path)
         await bot.send_document(chat_id=message.chat.id, document=file)
         await message.delete()
-
     except Exception as e:
         logger.exception(e)
         await message.reply(f'Ошибка экспорта, {e}')

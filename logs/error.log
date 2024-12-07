@@ -184,3 +184,5 @@ FROM users]
 2024-11-27 13:52:28,512 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @@c0ral0vii
 2024-11-27 13:55:13,263 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
 2024-11-27 13:56:43,459 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
+2024-12-07 00:20:51,419 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-07 00:22:42,444 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'

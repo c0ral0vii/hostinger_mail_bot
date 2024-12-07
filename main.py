@@ -1,5 +1,9 @@
 import asyncio
+from sched import scheduler
+
+import pytz
 from aiogram import Bot, Dispatcher, types
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from logger.logger import setup_logger
 from config.config import settings
@@ -12,7 +16,10 @@ from src.services.bot.handlers import (
     admin_export_handler,
     admin_import_handler,
     admin_add_emails,
+    admin_crud_handler,
+    admin_export_emails,
 )
+from src.services.database_saver.services import DatabaseSaverService
 from src.services.notification.service import Notification
 
 logger = setup_logger(__name__)
@@ -27,6 +34,8 @@ async def run():
 
     dp.include_routers(
         start_handler.command_router,
+        admin_export_emails.admin_export_router,
+        admin_crud_handler.admin_crud_router,
         admin_handler.admin_router,
         admin_search_handler.admin_search,
         admin_export_handler.export_router,
@@ -45,7 +54,15 @@ async def run():
 
 
 async def on_startup(bot: Bot):
-    # asyncio.create_task(Notification(bot=bot).start())
+    notification = Notification(bot=bot)
+    database_saver = DatabaseSaverService()
+    # await database_saver.start_save()
+
+    scheduler = AsyncIOScheduler(timezone=pytz.timezone('Europe/Moscow'))
+    scheduler.add_job(database_saver.start_save, 'cron', hour=0, minute=0)
+    scheduler.add_job(notification.start, 'cron', hour=10, minute=0)
+    scheduler.start()
+
 
     commands = [
         types.BotCommand(command="/start", description="Запуск бота"),

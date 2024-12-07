@@ -1,6 +1,7 @@
 from aiogram.filters import Filter
 from aiogram import Bot, types
 from config.config import settings
+from src.services.database.orm.admins import check_admin
 
 
 class ChatTypeFilter(Filter):
@@ -16,4 +17,11 @@ class IsAdmin(Filter):
         pass
 
     async def __call__(self, message: types.Message, bot: Bot) -> bool:
+        admins = await check_admin(data={
+            "user_id": message.from_user.id,
+        })
+
+        if admins is True:
+            return True
+
         return message.from_user.id in settings.get_admin_list()

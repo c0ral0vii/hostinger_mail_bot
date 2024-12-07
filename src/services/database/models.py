@@ -1,7 +1,7 @@
 from typing import List
 
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, relationship
-from sqlalchemy import Boolean, DateTime, Numeric, String, func, Integer, ForeignKey
+from sqlalchemy import Boolean, DateTime, Numeric, String, func, Integer, ForeignKey, BigInteger
 
 
 class Base(DeclarativeBase):
@@ -12,7 +12,7 @@ class Base(DeclarativeBase):
 class User(Base):
     __tablename__ = 'users'
 
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
     user_id: Mapped[int] = mapped_column(Integer, nullable=True)
     username: Mapped[str] = mapped_column(String, nullable=False)
     user_number: Mapped[str] = mapped_column(String, nullable=False)
@@ -36,3 +36,12 @@ class EMail(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     email: Mapped[str] = mapped_column(String, nullable=False)
     password: Mapped[str] = mapped_column(String, nullable=False)
+
+
+class AdminUser(Base):
+    __tablename__ = 'admin_users'
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
+    user_id: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    username: Mapped[str] = mapped_column(String(150), nullable=False)
+

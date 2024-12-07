@@ -35,7 +35,6 @@ async def state_change_email(message: types.Message, state: FSMContext):
     await message.bot.download_file(file.file_path, file_path)
 
     try:
-        await message.answer('База данных обновлена')
         df = pd.read_excel(file_path, header=None, engine='openpyxl')
 
         # Проверка на наличие необходимых столбцов
@@ -44,6 +43,8 @@ async def state_change_email(message: types.Message, state: FSMContext):
             return
 
         for index, row in df.iterrows():
+            if row[0] == 'email':
+                continue
             email = row[0]
             password = row[1]
 

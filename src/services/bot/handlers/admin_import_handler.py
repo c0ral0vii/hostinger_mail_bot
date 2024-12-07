@@ -48,10 +48,13 @@ async def import_document(message: types.Message, state: FSMContext):
             "password",
             "pay_lists"
         ]
+
         df.columns = expected_columns
 
 
         for index, row in df.iterrows():
+            if row["serial number"] == "serial number":
+                continue
             serial_number = row["serial number"]
             activated_date = row["activated date"]
             pay_day = row["pay_day"]
