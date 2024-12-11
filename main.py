@@ -18,6 +18,7 @@ from src.services.bot.handlers import (
     admin_add_emails,
     admin_crud_handler,
     admin_export_emails,
+    admin_to_next_month_handler,
 )
 from src.services.database_saver.services import DatabaseSaverService
 from src.services.notification.service import Notification
@@ -41,8 +42,9 @@ async def run():
         admin_export_handler.export_router,
         admin_import_handler.admin_import,
         admin_add_emails.add_emails_router,
+        admin_to_next_month_handler.to_next_month_router,
 
-        search_handler.search_router,
+        search_handler.search_router,   
         code_handler.get_code_router,
     )
 
@@ -56,11 +58,13 @@ async def run():
 async def on_startup(bot: Bot):
     notification = Notification(bot=bot)
     database_saver = DatabaseSaverService()
-    # await database_saver.start_save()
+    # await database_saver.start_save() для тестов
 
     scheduler = AsyncIOScheduler(timezone=pytz.timezone('Europe/Moscow'))
     scheduler.add_job(database_saver.start_save, 'cron', hour=0, minute=0)
     scheduler.add_job(notification.start, 'cron', hour=10, minute=0)
+    scheduler.add_job(notification.start, 'interval', seconds=5) # Для тестов
+    
     scheduler.start()
 
 

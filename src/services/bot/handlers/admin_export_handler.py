@@ -6,6 +6,7 @@ from src.services.export_excel.services import create_export_file_users
 from src.services.bot.filters.chat_type import ChatTypeFilter, IsAdmin
 from logger.logger import setup_logger
 
+
 export_router = Router(name='export_handler')
 export_router.message.filter(ChatTypeFilter(["private"]), IsAdmin())
 
@@ -25,6 +26,7 @@ async def export_handler(message: types.Message, bot: Bot):
         file = FSInputFile(path)
         await bot.send_document(chat_id=message.chat.id, document=file)
         await message.delete()
+        
     except Exception as e:
         logger.exception(e)
         await message.reply(f'Ошибка экспорта, {e}')

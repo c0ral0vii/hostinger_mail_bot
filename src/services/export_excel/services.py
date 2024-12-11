@@ -12,24 +12,25 @@ async def create_export_file_users(data: Dict[str, Any] = get_all_data(), filena
     sheet.title = 'export_data'
 
     headers = [
-        'serial number', 'activated date', 'pay_day', 'pre-pay day', 'on pause',
-        'phone', 'telegram username', 'username', 'email', 'password', 'pay_list'
+        'serial number', 'activated date', 'pay_day', 'invoice_day', 'on pause',
+        'phone', 'telegram username', 'username', 'email', 'password', 'pay_list', 'comment'
     ]
     sheet.append(headers)
 
     for user_id, user_data in data.items():
         row = [
             user_data["serial_number"],
-            user_data["activated_date"].strftime("%m/%d/%Y"),
-            user_data["pay_day"].strftime("%m/%d/%Y"),
-            user_data["pre_pay_day"].strftime("%m/%d/%Y"),
+            user_data["activated_date"].strftime("%d.%m.%Y"),
+            user_data["pay_day"].strftime("%d.%m.%Y"),
+            user_data["invoice_day"].strftime("%d.%m.%Y"),
             '+' if user_data["on_pause"] else '-',
             user_data["phone"],
             user_data["tg_username"],
             user_data["username"],
             user_data["email"],
             user_data["password"],
-            user_data["pay_list"]
+            user_data["pay_list"],
+            user_data["comment"],
         ]
         sheet.append(row)
 

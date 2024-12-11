@@ -16,27 +16,29 @@ async def excel_import(data: dict) -> None:
                 User.telegram_user = data['telegram_username']
                 user.activated_date = data.get('activated_date')
                 user.need_pay_date = data.get('pay_day')
-                user.pay_day = data.get('pre_pay_day')
-                user.on_pause = data.get('on_pause')
+                user.invoice_day = data.get('invoice_day')
+                user.stay_on_pause = data.get('on_pause')
                 user.user_number = data.get('phone')
                 user.username = data.get('username')
                 user.email = data.get('email')
                 user.password = data.get('password')
                 user.pay_lists = str(data.get("pay_lists", 'Нет'))
+                user.comment = str(data.get("comment"))
             else:
                 # Создание нового пользователя
                 user = User(
                     serial_number=data.get('serial_number'),
                     activated_date=data.get('activated_date'),
                     need_pay_date=data.get('pay_day'),
-                    pay_date=data.get('pre_pay_day'),
+                    invoice_day=data.get('invoice_day'),
                     stay_on_pause=data.get('on_pause'),
                     user_number=data.get('phone'),
                     telegram_user=data.get('telegram_username'),
                     username=data.get('username', 'Нет'),
                     email=data.get('email', 'Нет'),
                     password=data.get('password', 'Нет'),
-                    pay_lists=str(data.get("pay_lists", 'Нет'))
+                    pay_lists=str(data.get("pay_lists", 'Нет')),
+                    comment = str(data.get("comment"))
                 )
                 session.add(user)
 

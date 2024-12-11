@@ -1,7 +1,7 @@
 from typing import List
 
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, relationship
-from sqlalchemy import Boolean, DateTime, Numeric, String, func, Integer, ForeignKey, BigInteger
+from sqlalchemy import Boolean, DateTime, Numeric, String, func, Integer, ForeignKey, BigInteger, Text, Date
 
 
 class Base(DeclarativeBase):
@@ -18,9 +18,9 @@ class User(Base):
     user_number: Mapped[str] = mapped_column(String, nullable=False)
     telegram_user: Mapped[int] = mapped_column(String, nullable=False)
 
-    need_pay_date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
-    pay_date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
-    activated_date: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
+    need_pay_date: Mapped[Date] = mapped_column(Date, nullable=False)
+    invoice_day: Mapped[Date] = mapped_column(Date, nullable=False)
+    activated_date: Mapped[Date] = mapped_column(Date, nullable=False)
     stay_on_pause: Mapped[bool] = mapped_column(Boolean, default=False)
     serial_number: Mapped[str] = mapped_column(String, nullable=False)
 
@@ -28,6 +28,7 @@ class User(Base):
     password: Mapped[str] = mapped_column(String, nullable=False) # password hashed
 
     pay_lists: Mapped[str] = mapped_column(String, nullable=True)
+    comment: Mapped[str]  = mapped_column(Text, nullable=True)
 
 
 class EMail(Base):

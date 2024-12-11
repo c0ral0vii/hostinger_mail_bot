@@ -18,8 +18,8 @@ async def get_all_data() -> Dict[str, Any]:
             u = {
                 "serial_number": user.serial_number,
                 "activated_date": user.activated_date,
-                "pre_pay_day": user.need_pay_date,
-                "pay_day": user.pay_date,
+                "pay_day": user.need_pay_date,
+                "invoice_day": user.invoice_day,
                 "on_pause": user.stay_on_pause,
                 "phone": f"+{user.user_number}",
                 "tg_username": f"{user.telegram_user}",
@@ -27,6 +27,7 @@ async def get_all_data() -> Dict[str, Any]:
                 "email": user.email,
                 "password": user.password,
                 "pay_list": user.pay_lists,
+                "comment": user.comment,
             }
 
             all_users[user.id] = u

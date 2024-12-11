@@ -27,8 +27,8 @@ target_metadata = Base.metadata
 # ... etc.
 
 from config.config import settings
-# config.set_main_option("sqlalchemy.url", f"postgresql+asyncpg://root:root@0.0.0.0:5432/db?async_fallback=True")
-config.set_main_option("sqlalchemy.url", f"postgresql+asyncpg://root:root@db:5432/db?async_fallback=True")
+config.set_main_option("sqlalchemy.url", f"postgresql+asyncpg://root:root@0.0.0.0:5432/db?async_fallback=True")
+# config.set_main_option("sqlalchemy.url", f"postgresql+asyncpg://root:root@db:5432/db?async_fallback=True")
 
 
 def run_migrations_offline() -> None:

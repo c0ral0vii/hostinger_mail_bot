@@ -186,3 +186,31 @@ FROM users]
 2024-11-27 13:56:43,459 - src.services.database.orm.users - CRITICAL - Не удалось получить пользователя @c0ral0vii
 2024-12-07 00:20:51,419 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
 2024-12-07 00:22:42,444 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-10 12:10:08,120 - src.services.bot.handlers.admin_export_handler - ERROR - 'invoice day'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file_users()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 25, in create_export_file_users
+    user_data["invoice day"].strftime("%m/%d/%Y"),
+    ~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'invoice day'
+2024-12-10 12:12:30,984 - src.services.bot.handlers.admin_export_handler - ERROR - 'invoice_day'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file_users()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 25, in create_export_file_users
+    user_data["invoice_day"].strftime("%m/%d/%Y"),
+    ~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'invoice_day'
+2024-12-10 12:14:11,193 - src.services.bot.handlers.admin_export_handler - ERROR - 'comment'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 19, in export_handler
+    path = await create_export_file_users()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 33, in create_export_file_users
+    user_data["comment"],
+    ~~~~~~~~~^^^^^^^^^^^
+KeyError: 'comment'
+2024-12-11 11:36:53,601 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'

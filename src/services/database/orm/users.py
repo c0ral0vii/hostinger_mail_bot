@@ -1,6 +1,7 @@
 from sqlalchemy import select, or_
 
-from typing import Dict, Any
+from typing import Dict, Any, NoReturn
+from dateutil.relativedelta import relativedelta
 
 from logger.logger import setup_logger
 from src.services.database.database import async_session
@@ -18,6 +19,7 @@ async def search_user(serial_number: str) -> Dict[str, Any]:
                 "error": "Serial number is none",
                 "text": "Вы ввели пустой серийный номер"
             }
+
         stmt = select(User).where(User.serial_number == serial_number)
         result = await session.execute(stmt)
         user = result.scalar_one_or_none()
@@ -75,6 +77,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
             "email": user.email,
             "password": user.password,
             "phone": user.user_number,
+            "comment": user.comment,
         }
 
 
@@ -96,3 +99,19 @@ async def get_email(cross_number: str) -> Dict[str, Any]:
             "email": user.email,
             "password": user.password,
         }
+    
+
+async def to_next_month(data: Dict[str, Any]) -> NoReturn:
+    async with async_session() as session:
+        stmt = select(User).where(User.serial_number == data.get("serial_number", None).upper())
+        result = await session.execute(stmt)
+        user = result.scalar_one_or_none()
+
+        if user is None:
+            logger.warning(f"Перенос не удался, серийного номера не существует, {data.get("serial_number")}")
+            return
+        
+        user.invoice_day = user.invoice_day + relativedelta(month=1)
+
+        session.add(user)
+        await session.commit()

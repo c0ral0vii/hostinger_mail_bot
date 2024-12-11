@@ -1,3 +1,5 @@
+import datetime
+
 from aiogram import Router, F, types
 from aiogram.filters import StateFilter
 from aiogram.fsm.context import FSMContext
@@ -39,14 +41,15 @@ async def import_document(message: types.Message, state: FSMContext):
             "serial number",
             "activated date",
             "pay_day",
-            "pre-pay day",
+            "invoice_day",
             "on pause",
             "phone",
             "telegram username",
             "username",
             "email",
             "password",
-            "pay_lists"
+            "pay_lists",
+            'comment'
         ]
 
         df.columns = expected_columns
@@ -58,7 +61,16 @@ async def import_document(message: types.Message, state: FSMContext):
             serial_number = row["serial number"]
             activated_date = row["activated date"]
             pay_day = row["pay_day"]
-            pre_pay_day = row["pre-pay day"]
+
+            if row["invoice_day"] and isinstance(row["invoice_day"], int):
+                today = datetime.datetime.today()
+                invoice_day = datetime.datetime(
+                    year=today.year, 
+                    month=today.month, 
+                    day=row['invoice_day']).strftime("%Y-%m-%d")
+            else:
+                invoice_day = row["invoice_day"]
+
             on_pause = row["on pause"]
             phone = row["phone"]
             telegram_username = row["telegram username"]
@@ -66,12 +78,13 @@ async def import_document(message: types.Message, state: FSMContext):
             email = row["email"]
             password = row["password"]
             pay_lists = row["pay_lists"]
+            comment = row["comment"]
 
             data = {
-                'serial_number': str(serial_number),
+                'serial_number': str(serial_number).upper(),
                 'activated_date': pd.to_datetime(activated_date),
                 'pay_day': pd.to_datetime(pay_day),
-                'pre_pay_day': pd.to_datetime(pre_pay_day),
+                'invoice_day': pd.to_datetime(invoice_day),
                 'on_pause': True if on_pause == '+' else False,
                 'phone': str(phone).replace('+', '').replace('-', ''),
                 'telegram_username': str(telegram_username),
@@ -79,10 +92,12 @@ async def import_document(message: types.Message, state: FSMContext):
                 'email': str(email),
                 'password': str(password),
                 'pay_lists': pay_lists,
+                'comment': comment,
             }
 
             await excel_import(data=data)
 
         await message.answer("База данных обновлена успешно!")
     except Exception as e:
+        logger.debug(e)
         await message.answer(f"Ошибка при обработке файла: {e}")
