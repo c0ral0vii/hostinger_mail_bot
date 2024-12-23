@@ -674,3 +674,8 @@ KeyError: 'comment'
 2024-12-11 22:26:34,639 - __main__ - INFO - Запуск
 2024-12-11 22:27:11,323 - __main__ - INFO - Инициализация
 2024-12-11 22:27:12,192 - __main__ - INFO - Запуск
+2024-12-23 14:25:28,225 - __main__ - INFO - Инициализация
+2024-12-23 14:25:28,702 - __main__ - INFO - Запуск
+2024-12-23 14:26:22,556 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-23 14:26:26,114 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-23 14:26:44,536 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii

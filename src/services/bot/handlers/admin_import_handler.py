@@ -67,7 +67,21 @@ async def import_document(message: types.Message, state: FSMContext):
                 invoice_day = datetime.datetime(
                     year=today.year, 
                     month=today.month, 
-                    day=row['invoice_day']).strftime("%Y-%m-%d")
+                    day=row['invoice_day'])
+                if invoice_day < today:
+                    if today.month == 12:
+                        invoice_day = datetime.datetime(
+                            year=today.year + 1,
+                            month=1,
+                            day=row['invoice_day']
+                        )
+                    else:
+                        invoice_day = datetime.datetime(
+                            year=today.year,
+                            month=today.month + 1,
+                            day=row['invoice_day']
+                        )
+                invoice_day.strftime("%Y-%m-%d")
             else:
                 invoice_day = row["invoice_day"]
 

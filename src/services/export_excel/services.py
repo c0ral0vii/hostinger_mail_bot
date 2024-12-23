@@ -22,7 +22,7 @@ async def create_export_file_users(data: Dict[str, Any] = get_all_data(), filena
             user_data["serial_number"],
             user_data["activated_date"].strftime("%d.%m.%Y"),
             user_data["pay_day"].strftime("%d.%m.%Y"),
-            user_data["invoice_day"].strftime("%d.%m.%Y"),
+            user_data["invoice_day"].strftime("%d"),
             '+' if user_data["on_pause"] else '-',
             user_data["phone"],
             user_data["tg_username"],
