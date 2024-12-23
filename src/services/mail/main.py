@@ -78,7 +78,7 @@ class MailService:
         try:
             self.imap.select("INBOX")
             status, messages = self.imap.search(None, f'(TO "{self.from_email}")')
-
+            self.logger.debug(status, messages)
             if status != 'OK':
                 self.logger.error("Не удалось получить список сообщений")
                 return {
@@ -115,6 +115,7 @@ class MailService:
             for part in msg.walk():
                 if part.get_content_type() == 'text/plain':
                     code = re.search(r'\b\d{6}\b', part.as_string()).group()
+                    self.logger.debug(code)
 
             await self.disconnect()
             return {
