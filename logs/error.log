@@ -223,3 +223,13 @@ Traceback (most recent call last):
     user_data["activated_date"].strftime("%d.%m.%Y"),
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'strftime'
+2024-12-23 17:46:31,254 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:47:16,687 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:47:32,409 - src.services.mail.main - ERROR - kit303206581@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:47:38,545 - src.services.mail.main - ERROR - 13evacuation@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:47:48,195 - src.services.mail.main - ERROR - valterbraun33@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:49:22,835 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:49:34,181 - src.services.mail.main - ERROR - kit303206581@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:49:39,548 - src.services.mail.main - ERROR - 13evacuation@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:49:49,547 - src.services.mail.main - ERROR - valterbraun33@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 17:50:19,201 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
