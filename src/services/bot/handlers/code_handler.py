@@ -21,7 +21,7 @@ async def get_code_from_mail(callback: types.CallbackQuery):
     for email in emails:
         if "gmail.com" in email.email:
             continue
-        if email.email.split("@")[-1] != mail_data["email"].split("@")[-1]:
+        if email.email.split("@")[-1].strip() != mail_data["email"].split("@")[-1].strip():
             continue
 
         mail_service = await MailService(from_email=mail_data["email"], email_adress=email.email, password=email.password).get_last_message()

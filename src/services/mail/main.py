@@ -116,7 +116,6 @@ class MailService:
                     # Если сообщение имеет тип text/html
                     if part.get_content_type() == 'text/html':
                         html_content = part.get_payload(decode=True).decode('utf-8')
-                        self.logger.debug(f'HTML содержимое: {html_content}')
 
                         # Ищем 6-значный код внутри тега <h1>
                         code_match = re.search(r'<h1[^>]*>\s*(\d{6})\s*</h1>', html_content)
