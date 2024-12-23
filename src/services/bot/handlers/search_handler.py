@@ -34,6 +34,6 @@ async def search(message: types.Message, state: FSMContext):
         logger.critical(f"ID-{message.from_user.id}, @{message.from_user.username}---{info.get('error')}, {info.get('text')}")
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
-        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень в который необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}',
+        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень до которого необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}',
                              reply_markup=get_code_kb(cross_number=cross_number))
         await state.clear()

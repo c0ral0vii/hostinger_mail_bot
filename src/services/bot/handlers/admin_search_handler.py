@@ -38,6 +38,6 @@ async def search(message: types.Message, state: FSMContext):
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
         await message.answer(
-            f'👱{info.get("user_id")}\n🤖Серийный номер: {info.get("serial_number")}\n📅Дата оплаты: {info.get("need_pay_date")}\n🤖Статус паузы: {"На паузе" if info.get("stay_on_pause") else "Активен"}\n🤖Юзернейм: {info.get("username")}\n✉️Логин: {info.get("email")}\n🤖Пароль: {info.get("password")}\n📞Номер телефона {info.get("phone")}\n\nКоментарий: {info.get("comment", "Не указан")}',
+            f'👱{info.get("user_id")}\n🤖Серийный номер: {info.get("serial_number")}\n📅Дата оплаты: {info.get("pay_date")}\n🤖Статус паузы: {"На паузе" if info.get("stay_on_pause") else "Активен"}\n🤖Юзернейм: {info.get("username")}\n✉️Логин: {info.get("email")}\n🤖Пароль: {info.get("password")}\n📞Номер телефона {info.get("phone")}\n\nКоментарий: {info.get("comment", "Не указан")}',
             reply_markup=get_code_kb(cross_number=cross_number))
         await state.clear()

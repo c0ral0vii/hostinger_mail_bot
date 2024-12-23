@@ -31,7 +31,7 @@ async def search_user(serial_number: str) -> Dict[str, Any]:
             }
 
         return {
-            "pay_date": user.pay_date,
+            "pay_date": "-" if user.invoice_day is None else user.invoice_day.strftime("%d.%m.%Y"),
             "email": user.email,
             "password": user.password,
         }
@@ -70,10 +70,10 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
         return {
             "user_id": f"ID: {user.id}" if {user.id} is not None else "ID: Не задано",
             "serial_number": user.serial_number,
-            "need_pay_date": user.need_pay_date,
+            "need_pay_date": "-" if user.need_pay_date is None else user.need_pay_date.strftime("%d.%m.%Y"),
             "stay_on_pause": user.stay_on_pause,
             "username": user.username,
-            "pay_date": user.pay_date,
+            "pay_date": "-" if user.invoice_day is None else user.invoice_day.strftime("%d.%m.%Y"),
             "email": user.email,
             "password": user.password,
             "phone": user.user_number,

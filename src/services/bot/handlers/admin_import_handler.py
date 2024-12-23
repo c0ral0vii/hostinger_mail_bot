@@ -59,8 +59,8 @@ async def import_document(message: types.Message, state: FSMContext):
             if row["serial number"] == "serial number":
                 continue
             serial_number = row["serial number"]
-            activated_date = row["activated date"]
-            pay_day = row["pay_day"]
+            activated_date = None if row["activated date"] == "-" else row["activated date"]
+            pay_day = None if row["pay_day"] == "-" else row["pay_day"]
 
             if row["invoice_day"] and isinstance(row["invoice_day"], int):
                 today = datetime.datetime.today()
@@ -83,7 +83,7 @@ async def import_document(message: types.Message, state: FSMContext):
                         )
                 invoice_day.strftime("%Y-%m-%d")
             else:
-                invoice_day = row["invoice_day"]
+                invoice_day = None
 
             on_pause = row["on pause"]
             phone = row["phone"]
@@ -96,9 +96,9 @@ async def import_document(message: types.Message, state: FSMContext):
 
             data = {
                 'serial_number': str(serial_number).upper(),
-                'activated_date': pd.to_datetime(activated_date),
-                'pay_day': pd.to_datetime(pay_day),
-                'invoice_day': pd.to_datetime(invoice_day),
+                'activated_date': None if isinstance(activated_date, bool) else pd.to_datetime(activated_date),
+                'pay_day': None if isinstance(pay_day, bool) else pd.to_datetime(pay_day),
+                'invoice_day': None if isinstance(invoice_day, bool) else pd.to_datetime(invoice_day),
                 'on_pause': True if on_pause == '+' else False,
                 'phone': str(phone).replace('+', '').replace('-', ''),
                 'telegram_username': str(telegram_username),

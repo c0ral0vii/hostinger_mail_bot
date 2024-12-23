@@ -63,7 +63,7 @@ async def on_startup(bot: Bot):
     scheduler = AsyncIOScheduler(timezone=pytz.timezone('Europe/Moscow'))
     scheduler.add_job(database_saver.start_save, 'cron', hour=0, minute=0)
     scheduler.add_job(notification.start, 'cron', hour=10, minute=0)
-    scheduler.add_job(notification.start, 'interval', seconds=5) # Для тестов
+    # scheduler.add_job(notification.start, 'interval', seconds=5) # Для тестов
     
     scheduler.start()
 

@@ -214,3 +214,12 @@ Traceback (most recent call last):
     ~~~~~~~~~^^^^^^^^^^^
 KeyError: 'comment'
 2024-12-11 11:36:53,601 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 16:26:39,161 - src.services.bot.handlers.admin_export_handler - ERROR - 'NoneType' object has no attribute 'strftime'
+Traceback (most recent call last):
+  File "/app/src/services/bot/handlers/admin_export_handler.py", line 20, in export_handler
+    path = await create_export_file_users()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/services/export_excel/services.py", line 23, in create_export_file_users
+    user_data["activated_date"].strftime("%d.%m.%Y"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strftime'

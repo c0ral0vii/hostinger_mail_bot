@@ -18,9 +18,10 @@ class User(Base):
     user_number: Mapped[str] = mapped_column(String, nullable=False)
     telegram_user: Mapped[int] = mapped_column(String, nullable=False)
 
-    need_pay_date: Mapped[Date] = mapped_column(Date, nullable=False)
-    invoice_day: Mapped[Date] = mapped_column(Date, nullable=False)
-    activated_date: Mapped[Date] = mapped_column(Date, nullable=False)
+    need_pay_date: Mapped[Date] = mapped_column(Date, nullable=True)
+    invoice_day: Mapped[Date] = mapped_column(Date, nullable=True)
+    activated_date: Mapped[Date] = mapped_column(Date, nullable=True)
+    
     stay_on_pause: Mapped[bool] = mapped_column(Boolean, default=False)
     serial_number: Mapped[str] = mapped_column(String, nullable=False)
 
