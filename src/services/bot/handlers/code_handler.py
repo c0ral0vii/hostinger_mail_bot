@@ -19,15 +19,20 @@ async def get_code_from_mail(callback: types.CallbackQuery):
     emails = await get_emails()
 
     for email in emails:
+        if "gmail.com" in email.email:
+            continue
+        if email.email.split("@")[-1] != mail_data["email"].split("@")[-1]:
+            continue
+
         mail_service = await MailService(from_email=mail_data["email"], email_adress=email.email, password=email.password).get_last_message()
         if mail_service.get('status') == "200":
             logger.info(f"Запрошен серийный номер -- {cross_number}")
             await message.delete()
-            await callback.message.answer(f"-> {mail_service.get('code')} <-")
+            await callback.message.answer(f"{mail_service.get('code')}")
             return
         if mail_service.get('status') == "500":
             continue
         if mail_service.get('status') == "204":
             continue
-
+    await message.delete()
     await callback.message.answer(f"""Не удалось получить код с почты""")

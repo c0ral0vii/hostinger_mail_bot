@@ -96,28 +96,42 @@ class MailService:
                     "text": "Сообщения отсутствуют"
                 }
 
-            last_message_id = message_ids[-1]
-            status, msg_data = self.imap.fetch(last_message_id, '(RFC822)')
+            for message_id in reversed(message_ids):
+                status, msg_data = self.imap.fetch(message_id, '(RFC822)')
 
-            if status != "OK":
-                self.logger.error("Ошибка при загрузке сообщения")
-                return {
-                    "status": "500",
-                    "text": "Ошибка при загрузке сообщения"
-                }
+                if status != "OK":
+                    self.logger.error(f"Ошибка при загрузке сообщения {message_id}")
+                    continue
 
-            msg = email.message_from_bytes(msg_data[0][1])
-            self.logger.debug(f'code: {msg}')
+                msg = email.message_from_bytes(msg_data[0][1])
+                self.logger.debug(f'Сообщение: {msg}')
 
-            from_email = msg.get('From')
-            subject = msg.get('Subject')
+                from_email = msg.get('From')
+                subject = msg.get('Subject')
 
-            code = ''
+                code = ''
 
-            for part in msg.walk():
-                if part.get_content_type() == 'text/plain':
-                    code = re.search(r'\b\d{6}\b', part.as_string()).group()
-                    self.logger.debug(f'code: {code}')
+                # Проверяем части сообщения
+                for part in msg.walk():
+                    # Если сообщение имеет тип text/html
+                    if part.get_content_type() == 'text/html':
+                        html_content = part.get_payload(decode=True).decode('utf-8')
+                        self.logger.debug(f'HTML содержимое: {html_content}')
+
+                        # Ищем 6-значный код внутри тега <h1>
+                        code_match = re.search(r'<h1[^>]*>\s*(\d{6})\s*</h1>', html_content)
+                        if code_match:
+                            code = code_match.group(1)
+                            self.logger.debug(f'Найденный код: {code}')
+                            await self.disconnect()
+                            return {
+                                "status": "200",
+                                "text": "Удалось получить последнее сообщение с кодом",
+                                "from": from_email,
+                                "subject": subject,
+                                "code": code,
+                            }
+
             await self.disconnect()
             return {
                 "status": "200",

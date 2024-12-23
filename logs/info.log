@@ -774,3 +774,91 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-23 19:03:12,137 - src.services.mail.main - INFO - Сообщения отсутствуют
 2024-12-23 19:03:13,155 - src.services.mail.main - INFO - Сообщения отсутствуют
 2024-12-23 19:03:14,810 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- Kit4m00047849
+2024-12-23 19:10:42,932 - __main__ - INFO - Инициализация
+2024-12-23 19:10:44,032 - __main__ - INFO - Запуск
+2024-12-23 19:10:56,889 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-23 19:11:45,837 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-23 19:12:07,539 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:12:07,544 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:12:12,382 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:13,320 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:14,597 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:15,911 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:17,140 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:17,881 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:12:23,143 - src.services.mail.main - ERROR - kit303206581@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:12:23,143 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:12:32,144 - src.services.mail.main - ERROR - 13evacuation@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:12:32,145 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:12:37,372 - src.services.mail.main - ERROR - valterbraun33@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:12:37,372 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:12:42,658 - src.services.mail.main - ERROR - На почте -> 21@ilon.online <- не найден код - 'NoneType' object has no attribute 'group'
+2024-12-23 19:58:03,942 - __main__ - INFO - Инициализация
+2024-12-23 19:58:04,440 - __main__ - INFO - Запуск
+2024-12-23 19:58:08,070 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-23 19:58:25,165 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:58:25,172 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:58:30,052 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:58:31,234 - src.services.mail.main - ERROR - На почте -> 55@castish.online <- не найден код - 'NoneType' object has no attribute 'group'
+2024-12-23 19:58:33,359 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:58:34,789 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:58:35,903 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:58:37,053 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 19:58:42,125 - src.services.mail.main - ERROR - kit303206581@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:58:42,125 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:58:51,057 - src.services.mail.main - ERROR - 13evacuation@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:58:51,057 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:58:56,222 - src.services.mail.main - ERROR - valterbraun33@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 19:58:56,222 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 19:59:05,464 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:03:24,362 - __main__ - INFO - Инициализация
+2024-12-23 20:03:25,024 - __main__ - INFO - Запуск
+2024-12-23 20:03:31,091 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-23 20:03:40,411 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:03:40,416 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:03:41,452 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:03:47,246 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400771297
+2024-12-23 20:07:57,531 - __main__ - INFO - Инициализация
+2024-12-23 20:08:00,263 - __main__ - INFO - Запуск
+2024-12-23 20:08:02,564 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-23 20:08:19,532 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:08:19,533 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:08:22,977 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:08:31,240 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400771297
+2024-12-23 20:10:13,602 - __main__ - INFO - Инициализация
+2024-12-23 20:10:15,875 - __main__ - INFO - Запуск
+2024-12-23 20:10:27,510 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:10:27,510 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:10:30,989 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:10:39,193 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400771297
+2024-12-23 20:15:00,921 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-23 20:17:46,390 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-23 20:17:59,705 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:17:59,706 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:18:03,653 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:18:07,102 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:18:10,592 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:18:14,908 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:18:19,985 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:18:24,379 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT4M001041003BA
+2024-12-23 20:26:00,900 - __main__ - INFO - Инициализация
+2024-12-23 20:26:03,494 - __main__ - INFO - Запуск
+2024-12-23 20:26:18,551 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:26:18,552 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:26:25,756 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:26:29,050 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:26:33,194 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:26:36,984 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:26:40,418 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:26:46,692 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT4M001041003BA
+2024-12-23 20:30:28,980 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:30:28,982 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:30:36,825 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:30:42,079 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400771297
+2024-12-23 20:32:50,804 - __main__ - INFO - Инициализация
+2024-12-23 20:32:53,477 - __main__ - INFO - Запуск
+2024-12-23 20:33:07,353 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 20:33:07,355 - src.services.mail.main - INFO - Нет подключения к почтовому серверу
+2024-12-23 20:33:11,145 - src.services.mail.main - INFO - Сообщения отсутствуют
+2024-12-23 20:33:21,634 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT4M001041003BA
+2024-12-23 20:33:34,562 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT400771297
