@@ -93,7 +93,7 @@ async def get_email(cross_number: str) -> Dict[str, Any]:
                 "error": "Not found",
                 "text": "Не найдена привязанная к вам почта"
             }
-
+        logger.debug(f"{user.email}: {user.password}")
         return {
             "status": "200",
             "email": user.email,

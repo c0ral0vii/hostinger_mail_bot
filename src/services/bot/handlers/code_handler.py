@@ -15,7 +15,7 @@ async def get_code_from_mail(callback: types.CallbackQuery):
     cross_number = callback.data.split("_")[-1]
 
     message = await callback.message.answer("Получаем код...")
-    mail_data = await get_email(cross_number=cross_number)
+    mail_data = await get_email(cross_number=cross_number.upper())
     emails = await get_emails()
 
     for email in emails:

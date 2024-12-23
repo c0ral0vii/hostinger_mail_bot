@@ -233,3 +233,5 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-23 17:49:39,548 - src.services.mail.main - ERROR - 13evacuation@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
 2024-12-23 17:49:49,547 - src.services.mail.main - ERROR - valterbraun33@gmail.com is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
 2024-12-23 17:50:19,201 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-23 18:59:38,510 - src.services.database.orm.users - CRITICAL - Не удалось получить кросс номер -- Kit4m00047849
+2024-12-23 19:03:05,235 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
