@@ -4,6 +4,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 def create_admin_keyboard():
     add_to_db = KeyboardButton(text="Добавить в базу")
     export_db = KeyboardButton(text="Выгрузить базу")
+    change_everyday_message = KeyboardButton(text="Изменить сообщение дня")
     find_in_db = KeyboardButton(text="Найти в базе(админ)")
     change_emails_button = KeyboardButton(text="Изменить почты")
     export_email = KeyboardButton(text="Выгрузить почты")
@@ -13,6 +14,7 @@ def create_admin_keyboard():
         keyboard=[
             [add_to_db, export_db],
             [find_in_db, admins],
+            [change_everyday_message],
             [change_emails_button, export_email]
         ],
         resize_keyboard=True,

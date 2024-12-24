@@ -133,11 +133,8 @@ class MailService:
 
             await self.disconnect()
             return {
-                "status": "200",
-                "text": "Удалось получить последнее сообщение",
-                "from": from_email,
-                "subject": subject,
-                "code": code,
+                "status": "204",
+                "text": "Не удалось получить сообщение",
             }
 
         except AttributeError as ae:

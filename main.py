@@ -19,9 +19,12 @@ from src.services.bot.handlers import (
     admin_crud_handler,
     admin_export_emails,
     admin_to_next_month_handler,
+    everyday_message,
 )
 from src.services.database_saver.services import DatabaseSaverService
 from src.services.notification.service import Notification
+from src.services.database.orm.everyday_message import create_everyday_message
+
 
 logger = setup_logger(__name__)
 
@@ -43,6 +46,7 @@ async def run():
         admin_import_handler.admin_import,
         admin_add_emails.add_emails_router,
         admin_to_next_month_handler.to_next_month_router,
+        everyday_message.router,
 
         search_handler.search_router,   
         code_handler.get_code_router,
@@ -56,6 +60,8 @@ async def run():
 
 
 async def on_startup(bot: Bot):
+    await create_everyday_message()
+
     notification = Notification(bot=bot)
     database_saver = DatabaseSaverService()
     # await database_saver.start_save() для тестов

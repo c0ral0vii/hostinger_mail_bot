@@ -68,6 +68,7 @@ async def get_user_admin(find_str: str) -> Dict[str, Any]:
             }
 
         return {
+            "data": user,
             "user_id": f"ID: {user.id}" if {user.id} is not None else "ID: Не задано",
             "serial_number": user.serial_number,
             "need_pay_date": "-" if user.need_pay_date is None else user.need_pay_date.strftime("%d.%m.%Y"),

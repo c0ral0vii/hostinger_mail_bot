@@ -6,6 +6,7 @@ from logger.logger import setup_logger
 from src.services.bot.fsm.user_states import InputNumberState
 from src.services.bot.keyboards.inline.code_keyboard import get_code_kb
 from src.services.database.orm.users import search_user
+from src.services.database.orm.everyday_message import create_everyday_message
 
 
 search_router = Router(name="search_router")
@@ -28,12 +29,13 @@ async def search(message: types.Message, state: FSMContext):
     data = await state.get_data()
     cross_number = data['number']
 
-    info = await search_user(serial_number=str(cross_number).upper())
+    info = await search_user(serial_number=str(cross_number).strip().upper())
 
     if info.get('error'):
         logger.critical(f"ID-{message.from_user.id}, @{message.from_user.username}---{info.get('error')}, {info.get('text')}")
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
-        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень до которого необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}',
+        day_message = await create_everyday_message()
+        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень до которого необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}\n\nСообщение дня: {"-" if day_message.message is None else day_message.message}',
                              reply_markup=get_code_kb(cross_number=cross_number))
         await state.clear()

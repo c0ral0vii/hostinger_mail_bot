@@ -32,6 +32,13 @@ class User(Base):
     comment: Mapped[str]  = mapped_column(Text, nullable=True)
 
 
+class EverydayMessage(Base):
+    __tablename__ = 'everyday_messages'
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    message: Mapped[str] = mapped_column(String, nullable=True)
+
+
 class EMail(Base):
     __tablename__ = 'emails'
 
