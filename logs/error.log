@@ -252,3 +252,13 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-23 20:26:18,551 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
 2024-12-23 20:30:28,980 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
 2024-12-23 20:33:07,353 - src.services.mail.main - ERROR - Extra12@zov.icu is not connected: b'[AUTHENTICATIONFAILED] Authentication failed.'
+2024-12-24 17:32:35,646 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:35,652 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:36,986 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:36,988 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:38,228 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:38,229 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:43,843 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ ПОЧТЫ
+2024-12-24 17:32:43,845 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:48,448 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ВЫГРУЗИТЬ БАЗУ
+2024-12-24 17:32:48,450 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует

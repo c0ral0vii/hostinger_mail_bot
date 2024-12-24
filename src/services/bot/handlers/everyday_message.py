@@ -16,6 +16,7 @@ class EverydayState(StatesGroup):
 
 @router.message(F.text == "Изменить сообщение дня")
 async def change_everyday_message(message: types.Message, state: FSMContext):
+    await state.clear()
     everyday_message = await create_everyday_message()
 
     await message.answer(f"Установленое сообщение: {everyday_message.message}\n\nОтправьте новое сообщение дня:", reply_markup=InlineKeyboardMarkup(

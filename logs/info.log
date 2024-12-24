@@ -900,3 +900,28 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-24 04:51:43,033 - __main__ - INFO - Запуск
 2024-12-24 04:51:51,465 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-12-24 04:52:00,889 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:31:23,814 - __main__ - INFO - Инициализация
+2024-12-24 17:31:24,474 - __main__ - INFO - Запуск
+2024-12-24 17:32:01,417 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-24 17:32:19,464 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:32:22,633 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-24 17:32:34,408 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:32:35,646 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:35,652 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:36,986 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:36,988 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:38,228 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ СООБЩЕНИЕ ДНЯ
+2024-12-24 17:32:38,229 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:43,843 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ИЗМЕНИТЬ ПОЧТЫ
+2024-12-24 17:32:43,845 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:32:48,448 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ВЫГРУЗИТЬ БАЗУ
+2024-12-24 17:32:48,450 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-24 17:33:43,531 - __main__ - INFO - Инициализация
+2024-12-24 17:33:44,042 - __main__ - INFO - Запуск
+2024-12-24 17:33:48,614 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:33:59,841 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:34:01,331 - src.services.bot.handlers.admin_import_handler - INFO - Импорт @c0ral0vii
+2024-12-24 17:34:02,912 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:34:07,245 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:34:09,903 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-24 17:34:11,192 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
