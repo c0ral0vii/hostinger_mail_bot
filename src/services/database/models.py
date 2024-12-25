@@ -51,6 +51,6 @@ class AdminUser(Base):
     __tablename__ = 'admin_users'
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    user_id: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    user_id: Mapped[int] = mapped_column(BigInteger, nullable=False, unique=True)
     username: Mapped[str] = mapped_column(String(150), nullable=False)
 

@@ -925,3 +925,26 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-24 17:34:07,245 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-12-24 17:34:09,903 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-12-24 17:34:11,192 - src.services.bot.handlers.admin_add_emails - INFO - Импорт @c0ral0vii
+2024-12-24 17:44:50,931 - __main__ - INFO - Инициализация
+2024-12-24 17:44:51,520 - __main__ - INFO - Запуск
+2024-12-24 17:45:00,207 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-24 17:45:01,979 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-24 17:47:09,886 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-24 17:47:21,710 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-24 17:50:01,656 - __main__ - INFO - Инициализация
+2024-12-24 17:50:02,974 - __main__ - INFO - Запуск
+2024-12-24 17:50:04,076 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-24 17:53:03,349 - __main__ - INFO - Инициализация
+2024-12-24 17:53:11,807 - __main__ - INFO - Запуск
+2024-12-25 10:09:49,476 - __main__ - INFO - Инициализация
+2024-12-25 10:09:50,062 - __main__ - INFO - Запуск
+2024-12-25 10:10:10,595 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-25 10:14:14,821 - __main__ - INFO - Инициализация
+2024-12-25 10:14:15,289 - __main__ - INFO - Запуск
+2024-12-25 10:14:20,180 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-25 10:16:30,637 - __main__ - INFO - Инициализация
+2024-12-25 10:16:31,172 - __main__ - INFO - Запуск
+2024-12-25 10:16:41,539 - src.services.bot.handlers.search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-25 10:16:50,789 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-25 10:17:09,418 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-25 10:17:18,478 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT4M001609275WT

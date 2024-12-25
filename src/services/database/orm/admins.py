@@ -21,14 +21,14 @@ async def add_admin(data: Dict[str, Any], **kwargs) -> AdminUser.user_id:
             await session.rollback()
 
 
-async def check_admin(data: Dict[str, Any], **kwargs) -> bool:
+async def check_admin(data: Dict[str, Any], **kwargs):
     async with async_session() as session:
-        stmt = select(AdminUser).where(AdminUser.user_id == data["user_id"])
+        stmt = select(AdminUser).where(AdminUser.user_id == data["user_id"]).limit(1)
         result = await session.execute(stmt)
         admin = result.scalar_one_or_none()
 
         if admin is None:
-            return False
+            return
         return True
 
 
