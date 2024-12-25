@@ -36,6 +36,7 @@ async def search(message: types.Message, state: FSMContext):
         await message.answer(f"{info.get('error')}. {info.get('text')}")
     else:
         day_message = await create_everyday_message()
-        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень до которого необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}\n\nСообщение дня: {"-" if day_message.message is None else day_message.message}',
+        await message.answer(f'По данному серийному номеру({cross_number}) было найдено\nДень до которого необходимо оплатить - {info.get('pay_date')}\nВаш логин - {info.get('email')}\nВаш пароль - {info.get("password")}',
                              reply_markup=get_code_kb(cross_number=cross_number, user=True))
+        await message.answer(f"Сообщение дня: {"-" if day_message.message is None else day_message.message}")
         await state.clear()
