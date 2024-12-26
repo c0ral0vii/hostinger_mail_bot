@@ -20,6 +20,7 @@ from src.services.bot.handlers import (
     admin_export_emails,
     admin_to_next_month_handler,
     everyday_message,
+    admin_add_new_user
 )
 from src.services.database_saver.services import DatabaseSaverService
 from src.services.notification.service import Notification
@@ -47,6 +48,7 @@ async def run():
         everyday_message.router,
         admin_to_next_month_handler.to_next_month_router,
         admin_search_handler.admin_search,
+        admin_add_new_user.router,
 
         search_handler.search_router,   
         code_handler.get_code_router,

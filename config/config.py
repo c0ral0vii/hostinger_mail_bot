@@ -30,7 +30,7 @@ class Config:
 
         # Admins
 
-        self._ADMIN_LIST = [345143657, 6408069387]
+        self._ADMIN_LIST = [944360812, 345143657, 6408069387]
 
     def get_database_link(self):
         return rf'postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}'

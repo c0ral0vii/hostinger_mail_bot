@@ -262,3 +262,7 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-24 17:32:43,845 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
 2024-12-24 17:32:48,448 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует ВЫГРУЗИТЬ БАЗУ
 2024-12-24 17:32:48,450 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-26 06:00:29,182 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует /ADMIN
+2024-12-26 06:00:29,183 - src.services.bot.handlers.search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-26 06:08:48,189 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует 3214
+2024-12-26 06:08:48,195 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует

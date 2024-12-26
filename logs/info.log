@@ -948,3 +948,23 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-25 10:16:50,789 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
 2024-12-25 10:17:09,418 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
 2024-12-25 10:17:18,478 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT4M001609275WT
+2024-12-26 06:00:17,361 - __main__ - INFO - Инициализация
+2024-12-26 06:00:17,927 - __main__ - INFO - Запуск
+2024-12-26 06:00:26,270 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-26 06:00:29,182 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует /ADMIN
+2024-12-26 06:00:29,183 - src.services.bot.handlers.search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-26 06:01:08,419 - __main__ - INFO - Инициализация
+2024-12-26 06:01:08,911 - __main__ - INFO - Запуск
+2024-12-26 06:01:30,224 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-26 06:01:31,858 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-26 06:02:05,256 - __main__ - INFO - Инициализация
+2024-12-26 06:02:05,760 - __main__ - INFO - Запуск
+2024-12-26 06:07:21,399 - __main__ - INFO - Инициализация
+2024-12-26 06:07:21,910 - __main__ - INFO - Запуск
+2024-12-26 06:07:58,112 - __main__ - INFO - Инициализация
+2024-12-26 06:07:58,617 - __main__ - INFO - Запуск
+2024-12-26 06:08:46,190 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-26 06:08:48,189 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует 3214
+2024-12-26 06:08:48,195 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-26 06:13:12,231 - __main__ - INFO - Инициализация
+2024-12-26 06:13:12,742 - __main__ - INFO - Запуск
