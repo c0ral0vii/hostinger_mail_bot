@@ -44,7 +44,7 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
 
 @router.message(F.text, StateFilter(AddNewUser.serial_number))
 async def admin_add_new_user(message: types.Message, state: FSMContext):
-    await state.update_data(serial_number=message.text)
+    await state.update_data(serial_number=message.text.upper())
     await message.answer("Укажите invoice day", reply_markup=InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="Отмена", callback_data="cancel"),]

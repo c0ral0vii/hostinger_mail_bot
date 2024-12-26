@@ -13,7 +13,7 @@ async def excel_import(data: dict) -> None:
 
             if user:
                 # Обновление данных существующего пользователя
-                User.telegram_user = data['telegram_username']
+                user.telegram_user = data['telegram_username']
                 user.activated_date = data.get('activated_date')
                 user.need_pay_date = data.get('pay_day')
                 user.invoice_day = data.get('invoice_day')
@@ -27,7 +27,7 @@ async def excel_import(data: dict) -> None:
             else:
                 # Создание нового пользователя
                 user = User(
-                    serial_number=data.get('serial_number'),
+                    serial_number=data.get('serial_number').upper(),
                     activated_date=data.get('activated_date'),
                     need_pay_date=data.get('pay_day'),
                     invoice_day=data.get('invoice_day'),
