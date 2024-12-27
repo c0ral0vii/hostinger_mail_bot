@@ -18,3 +18,4 @@ async def start_handler(message: types.Message, state: FSMContext):
     await message.answer(f'Привет, ты можешь узнать когда тебе предстоит оплатить \
                                 сервис или получить код с почты', reply_markup=create_start_keyboard())
     await state.set_state(InputNumberState.number)
+

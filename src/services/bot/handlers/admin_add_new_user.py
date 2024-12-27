@@ -9,6 +9,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from src.services.bot.filters.chat_type import ChatTypeFilter, IsAdmin
 from logger.logger import setup_logger
 from src.services.database.orm.import_excel import excel_import
+from src.services.database.orm.users import search_user
 
 router = Router()
 logger = setup_logger(__name__)
@@ -45,6 +46,13 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
 @router.message(F.text, StateFilter(AddNewUser.serial_number))
 async def admin_add_new_user(message: types.Message, state: FSMContext):
     await state.update_data(serial_number=message.text.upper())
+    result = await search_user(serial_number=message.text.upper())
+
+    if not result.get("error", False):
+        await message.answer("Такой серийный номер уже существует, попробуйте еще раз")
+        await state.clear()
+        return
+
     await message.answer("Укажите invoice day", reply_markup=InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="Отмена", callback_data="cancel"),]

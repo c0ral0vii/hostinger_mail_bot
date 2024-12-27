@@ -977,3 +977,15 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-26 11:55:19,898 - __main__ - INFO - Инициализация
 2024-12-26 11:55:20,419 - __main__ - INFO - Запуск
 2024-12-26 11:55:26,760 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-27 13:01:22,437 - __main__ - INFO - Инициализация
+2024-12-27 13:01:23,152 - __main__ - INFO - Запуск
+2024-12-27 13:01:35,061 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-27 13:01:40,202 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-27 13:04:24,077 - __main__ - INFO - Инициализация
+2024-12-27 13:04:24,675 - __main__ - INFO - Запуск
+2024-12-27 13:04:41,228 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-27 13:05:25,085 - __main__ - INFO - Инициализация
+2024-12-27 13:05:25,511 - __main__ - INFO - Запуск
+2024-12-27 13:05:37,829 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-27 13:05:40,132 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-27 13:05:53,634 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT303138374

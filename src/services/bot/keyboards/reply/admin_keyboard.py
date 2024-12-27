@@ -10,12 +10,12 @@ def create_admin_keyboard():
     change_emails_button = KeyboardButton(text="Изменить почты")
     export_email = KeyboardButton(text="Выгрузить почты")
     admins = KeyboardButton(text="Админы")
-
+    in_main_menu = KeyboardButton(text="В главное меню")
     keyboard = ReplyKeyboardMarkup(
         keyboard=[
             [add_to_db, export_db],
-            [change_everyday_message, add_to_db_bot],
-            [find_in_db, admins],
+            [change_everyday_message, add_to_db_bot, find_in_db],
+            [admins, in_main_menu],
             [change_emails_button, export_email]
         ],
         resize_keyboard=True,
