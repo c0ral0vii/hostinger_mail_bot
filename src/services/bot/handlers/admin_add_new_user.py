@@ -19,6 +19,7 @@ router.message.filter(ChatTypeFilter(["private"]), IsAdmin())
 class AddNewUser(StatesGroup):
     serial_number = State()
     invoice_day = State()
+    activated_day = State()
     payment_day = State()
     activated_date = State()
     on_pause = State()
@@ -53,7 +54,28 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
         await state.clear()
         return
 
-    await message.answer("Укажите invoice day", reply_markup=InlineKeyboardMarkup(
+    await message.answer("Укажите activated day(Формат: день.месяц.год или -)", reply_markup=InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="Отмена", callback_data="cancel"),]
+        ]
+    ))
+
+    await state.set_state(AddNewUser.activated_day)
+
+
+@router.message(F.text, StateFilter(AddNewUser.activated_day))
+async def admin_add_new_user(message: types.Message, state: FSMContext):
+    try:
+        if message.text != "-":
+            activated_day = datetime.datetime.strptime(message.text, "%d.%m.%Y")
+            await state.update_data(activated_day=activated_day)
+        else:
+            await state.update_data(activated_day=None)
+    except:
+        await message.answer("Не правильный формат")
+        return
+
+    await message.answer("Укажите invoice day(число или -)", reply_markup=InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="Отмена", callback_data="cancel"),]
         ]
@@ -158,7 +180,11 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
     await state.update_data(comment=message.text)
     data = await state.get_data()
     logger.debug(data)
-    data["invoice_day"] = int(data["invoice_day"])
+    try:
+        data["invoice_day"] = int(data["invoice_day"])
+    except:
+        data["invoice_day"] = None
+
     if data["invoice_day"] and isinstance(data["invoice_day"], int):
         today = datetime.datetime.today()
         invoice_day = datetime.datetime(
@@ -172,21 +198,18 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
                     month=1,
                     day=data['invoice_day']
                 )
+                invoice_day.strftime("%Y-%m-%d")
+
             else:
-                invoice_day = datetime.datetime(
-                    year=today.year,
-                    month=today.month + 1,
-                    day=data['invoice_day']
-                )
-        invoice_day.strftime("%Y-%m-%d")
+                invoice_day = None
     else:
         invoice_day = None
     try:
-        await excel_import(data={
+        result = await excel_import(data={
             "serial_number": data["serial_number"],
             "on_pause": data["on_pause"],
             "pay_day": None,
-            "activated_date": None,
+            "activated_date": data["activated_day"],
             "invoice_day": invoice_day,
             "phone": data["phone"],
             "username": data["username"],
@@ -196,8 +219,10 @@ async def admin_add_new_user(message: types.Message, state: FSMContext):
             "comment": data["comment"],
         })
         await message.answer('Успешно добавлено')
+        await state.clear()
     except Exception as e:
         await message.answer(f'Произошла ошибка {e}')
+        await state.clear()
 
 
 

@@ -266,3 +266,10 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-26 06:00:29,183 - src.services.bot.handlers.search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
 2024-12-26 06:08:48,189 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует 3214
 2024-12-26 06:08:48,195 - src.services.bot.handlers.admin_search_handler - CRITICAL - ID-944360812, @c0ral0vii---Not found, Вы не правильно ввели номер или его не существует
+2024-12-28 21:01:50,605 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST
+2024-12-28 21:03:52,362 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TESTT
+2024-12-28 21:05:21,126 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TESTTEST
+2024-12-28 21:09:57,887 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST#!@$
+2024-12-28 21:23:25,930 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST!@#$5
+2024-12-28 21:24:44,067 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует FSADSAF
+2024-12-28 21:27:57,525 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует SAFGDSAD

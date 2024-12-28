@@ -989,3 +989,31 @@ AttributeError: 'NoneType' object has no attribute 'strftime'
 2024-12-27 13:05:37,829 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
 2024-12-27 13:05:40,132 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
 2024-12-27 13:05:53,634 - src.services.bot.handlers.code_handler - INFO - Запрошен серийный номер -- KIT303138374
+2024-12-28 21:01:37,710 - __main__ - INFO - Инициализация
+2024-12-28 21:01:38,278 - __main__ - INFO - Запуск
+2024-12-28 21:01:39,384 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-28 21:01:43,014 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-28 21:01:46,502 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-28 21:01:50,605 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST
+2024-12-28 21:03:52,362 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TESTT
+2024-12-28 21:05:21,126 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TESTTEST
+2024-12-28 21:09:29,370 - __main__ - INFO - Инициализация
+2024-12-28 21:09:29,804 - __main__ - INFO - Запуск
+2024-12-28 21:09:40,736 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-28 21:09:43,883 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-28 21:09:57,887 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST#!@$
+2024-12-28 21:11:26,086 - __main__ - INFO - Инициализация
+2024-12-28 21:11:26,384 - __main__ - INFO - Запуск
+2024-12-28 21:11:33,046 - src.services.bot.handlers.admin_search_handler - INFO - Начал поиск - @c0ral0vii, ID: 944360812
+2024-12-28 21:23:13,271 - __main__ - INFO - Инициализация
+2024-12-28 21:23:13,657 - __main__ - INFO - Запуск
+2024-12-28 21:23:19,369 - src.services.bot.handlers.start_handler - INFO - Пользователь @c0ral0vii, ID 944360812 - /start
+2024-12-28 21:23:21,085 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-28 21:23:25,930 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует TEST!@#$5
+2024-12-28 21:24:33,931 - __main__ - INFO - Инициализация
+2024-12-28 21:24:34,285 - __main__ - INFO - Запуск
+2024-12-28 21:24:40,594 - src.services.bot.handlers.admin_handler - INFO - Пользователь вошёл в админ панель - @c0ral0vii, ID: 944360812
+2024-12-28 21:24:44,067 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует FSADSAF
+2024-12-28 21:27:50,116 - __main__ - INFO - Инициализация
+2024-12-28 21:27:50,692 - __main__ - INFO - Запуск
+2024-12-28 21:27:57,525 - src.services.database.orm.users - CRITICAL - Не удаётся получить пользователя или такого серийного номера не существует SAFGDSAD
